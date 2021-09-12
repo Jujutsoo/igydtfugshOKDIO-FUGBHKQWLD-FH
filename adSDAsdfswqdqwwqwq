@@ -2725,9 +2725,13 @@ else
 end
 -- anti afk
 
-getgenv().gain = true;
+getgenv().ll = true;
+
 while wait() do
-	if getgenv().gain == true then
-		game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	if getgenv().ll == true then
+		while game.Players.LocalPlayer.Backpack:FindFirstChild("Big Money Stack") do
+    game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+    wait()
+end
 	end
 end
