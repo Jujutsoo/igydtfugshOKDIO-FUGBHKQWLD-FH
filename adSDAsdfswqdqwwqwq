@@ -2466,11 +2466,19 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
 		end
 	end
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-	wait(1)
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-	wait(1)
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+end)
+
+BA.AutoFarmJotaro4.MouseButton1Down:connect(function()
+	getgenv().oo = true;
+	while wait() do
+		if getgenv().oo == true then
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+		end
+	end
 end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
@@ -2492,11 +2500,19 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
 		end
 	end
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-	wait(1)
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-	wait(1)
-	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+end)
+
+BA.AutoFarmJotaro3.MouseButton1Down:connect(function()
+	getgenv().oo = false;
+	while wait() do
+		if getgenv().oo == true then
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+		end
+	end
 end)
 
 BA.HiddenSpot.MouseButton1Down:connect(function()
