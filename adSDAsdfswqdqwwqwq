@@ -2634,7 +2634,7 @@ oi.MouseButton1Click:connect(function()
 end)
 
 local vb = BA.XELTAB2
-local bv = BA.XELTAB2.Exit_2
+local bv = BA.XELTAB2.Exit
 
 bv.MouseButton1Click:connect(function()
 
@@ -2642,7 +2642,7 @@ bv.MouseButton1Click:connect(function()
 		UDim2.new(1.026, 0, 2, 0), -- End Position
 		"Out", -- Easing Direction
 		"Quint", -- Easing Style
-		1, -- Time In Seconds
+		1.4, -- Time In Seconds
 		false, -- Override Other Tweens
 		nil
 	)
@@ -2928,5 +2928,5 @@ BA.ResetOnSpawn = false
 BA.XELTAB1.Active = true
 BA.XELTAB1.Draggable = false
 BA.XELTAB2.ZIndex = 1
-BA.XELTAB1.ZIndex = 10
+BA.XELTAB1.ZIndex = 5
 BA.XELTAB2.Visible = true
