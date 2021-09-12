@@ -2469,9 +2469,9 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 end)
 
 BA.AutoFarmJotaro4.MouseButton1Down:connect(function()
-	getgenv().oo = true;
+	getgenv().quest = true;
 	while wait() do
-		if getgenv().oo == true then
+		if getgenv().quest == true then
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 			wait(1)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
@@ -2503,9 +2503,9 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function()
-	getgenv().oo = false;
+	getgenv().quest = false;
 	while wait() do
-		if getgenv().oo == true then
+		if getgenv().quest == true then
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 			wait(1)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
