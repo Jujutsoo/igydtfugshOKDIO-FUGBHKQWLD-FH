@@ -1992,7 +1992,7 @@ BA.XELTAB2.Name = "XELTAB2"
 BA.XELTAB2.Parent = BA.XELTAB1
 BA.XELTAB2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.XELTAB2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB2.Position = UDim2.new(3.5, 0, 0, 0)
+BA.XELTAB2.Position = UDim2.new(1.026, 0, 2, 0)
 BA.XELTAB2.Size = UDim2.new(0, 281, 0, 410)
 BA.XELTAB2.Visible = false
 
@@ -2006,10 +2006,11 @@ BA.Exit_2.Size = UDim2.new(0, 21, 0, 14)
 BA.Exit_2.ZIndex = 2
 BA.Exit_2.AutoButtonColor = false
 BA.Exit_2.Font = Enum.Font.Jura
-BA.Exit_2.Text = "X"
+BA.Exit_2.Text = ">"
 BA.Exit_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 BA.Exit_2.TextSize = 41.000
 BA.Exit_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BA.Exit_2.Rotation = 90
 
 BA.BackColor2.Name = "BackColor2"
 BA.BackColor2.Parent = BA.XELTAB2
@@ -2617,6 +2618,35 @@ X.MouseButton1Click:connect(function()
 	)
 end)
 
+local io = BA.XELTAB2
+local oi = BA.XELTAB1.SupportedGames
+
+oi.MouseButton1Click:connect(function()
+
+	io:TweenPosition(
+		UDim2.new(1.026, 0, 0, 0), -- End Position
+		"Out", -- Easing Direction
+		"Quint", -- Easing Style
+		1, -- Time In Seconds
+		false, -- Override Other Tweens
+		nil
+	)
+end)
+
+local vb = BA.XELTAB2
+local bv = BA.XELTAB2.Exit_2
+
+bv.MouseButton1Click:connect(function()
+
+	vb:TweenPosition(
+		UDim2.new(1.026, 0, 2, 0), -- End Position
+		"Out", -- Easing Direction
+		"Quint", -- Easing Style
+		1, -- Time In Seconds
+		false, -- Override Other Tweens
+		nil
+	)
+end)
 
 local X2 = BA.XELTAB1
 
@@ -2848,6 +2878,20 @@ BA.Purchase1.MouseButton1Down:connect(function()
 	game.ReplicatedStorage.Main.Shop.Buy:FireServer("Requiem Arrow")
 end)
 
+BA.Rejoin.MouseButton1Down:connect(function()
+	local ts = game:GetService("TeleportService")
+
+	local p = game:GetService("Players").LocalPlayer
+
+
+
+	ts:Teleport(game.PlaceId, p)
+end)
+
+BA.ServerHop.MouseButton1Down:connect(function()
+	game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
+end)
+
 BA.CheckWorth.MouseButton1Down:connect(function()
 	local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
@@ -2871,20 +2915,18 @@ BA.CheckWorth.MouseButton1Down:connect(function()
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
 
-local GC = getconnections or get_signal_cons
-if GC then
-	for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
-		if v["Disable"] then
-			v["Disable"](v)
-		elseif v["Disconnect"] then
-			v["Disconnect"](v)
-		end
-	end
-else
-end	
+--anti afk
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	wait(1)
+	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+--anti afk
 
 BA.ResetOnSpawn = false
 BA.XELTAB1.Active = true
 BA.XELTAB1.Draggable = false
-BA.XELTAB2.ZIndex = 0
-BA.XELTAB1.ZIndex = 1
+BA.XELTAB2.ZIndex = 1
+BA.XELTAB1.ZIndex = 10
+BA.XELTAB2.Visible = true
