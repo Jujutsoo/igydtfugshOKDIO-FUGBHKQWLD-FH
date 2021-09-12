@@ -2725,13 +2725,15 @@ else
 end
 -- anti afk
 
+-- auto collect money
 getgenv().ll = true;
 
 while wait() do
 	if getgenv().ll == true then
 		while game.Players.LocalPlayer.Backpack:FindFirstChild("Big Money Stack") do
-    game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-    wait()
-end
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait()
+		end
 	end
 end
+-- auto collect money
