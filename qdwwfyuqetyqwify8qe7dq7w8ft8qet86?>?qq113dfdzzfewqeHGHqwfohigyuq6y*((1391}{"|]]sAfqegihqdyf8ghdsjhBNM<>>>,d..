@@ -483,8 +483,8 @@ BA.UICorner_13.Parent = BA.Yes
 
 BA.No.Name = "No"
 BA.No.Parent = BA.areyousure
-BA.No.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-BA.No.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BA.No.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
+BA.No.BorderColor3 = Color3.fromRGB(50, 205, 50)
 BA.No.Position = UDim2.new(0.0198199078, 0, 0.591460526, 0)
 BA.No.Size = UDim2.new(0, 230, 0, 32)
 BA.No.AutoButtonColor = false
@@ -567,8 +567,8 @@ BA.UICorner_15.Parent = BA.Yes2
 
 BA.No2.Name = "No2"
 BA.No2.Parent = BA.areyousure2
-BA.No2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-BA.No2.BorderColor3 = Color3.fromRGB(255, 0, 0)
+BA.No2.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
+BA.No2.BorderColor3 = Color3.fromRGB(50, 205, 50)
 BA.No2.Position = UDim2.new(0.0199999996, 0, 0.591000021, 0)
 BA.No2.Size = UDim2.new(0, 230, 0, 32)
 BA.No2.AutoButtonColor = false
@@ -925,6 +925,7 @@ BA.ShopTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BA.ShopTab.BackgroundTransparency = 1.000
 BA.ShopTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
 BA.ShopTab.Size = UDim2.new(0, 334, 0, 361)
+BA.ShopTab.Visible = false
 
 BA.ShopTitle.Name = "ShopTitle"
 BA.ShopTitle.Parent = BA.ShopTab
@@ -1241,7 +1242,7 @@ BA.HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BA.HomeTab.BackgroundTransparency = 1.000
 BA.HomeTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
 BA.HomeTab.Size = UDim2.new(0, 334, 0, 361)
-BA.HomeTab.Visible = false
+BA.HomeTab.Visible = true
 
 BA.HomeTitle.Name = "HomeTitle"
 BA.HomeTitle.Parent = BA.HomeTab
@@ -1393,7 +1394,7 @@ BA.AutoFarmJotaro.Name = "AutoFarmJotaro"
 BA.AutoFarmJotaro.Parent = BA.AutoJ
 BA.AutoFarmJotaro.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.AutoFarmJotaro.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro.Position = UDim2.new(0.306285053, 0, 0.428012878, 0)
+BA.AutoFarmJotaro.Position = UDim2.new(0.305999994, 0, 0.430000007, 0)
 BA.AutoFarmJotaro.Size = UDim2.new(0, 318, 0, 32)
 BA.AutoFarmJotaro.Font = Enum.Font.SourceSans
 BA.AutoFarmJotaro.Text = "ㅤAuto Farm: Jotaro"
@@ -1509,7 +1510,7 @@ BA.Offg.Parent = BA.AutoG
 BA.Offg.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
 BA.Offg.BackgroundTransparency = 1.000
 BA.Offg.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offg.Position = UDim2.new(0.868085086, 0, 0.515068471, 0)
+BA.Offg.Position = UDim2.new(0.868085086, 0, 0.517808199, 0)
 BA.Offg.Size = UDim2.new(0, 52, 0, 50)
 BA.Offg.Visible = false
 BA.Offg.Font = Enum.Font.SciFi
@@ -1614,7 +1615,7 @@ BA.AutoFarmJotaro3.Name = "AutoFarmJotaro3"
 BA.AutoFarmJotaro3.Parent = BA.AutoQ
 BA.AutoFarmJotaro3.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.AutoFarmJotaro3.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro3.Position = UDim2.new(0.305999994, 0, 0.310000002, 0)
+BA.AutoFarmJotaro3.Position = UDim2.new(0.305999994, 0, 0.310315073, 0)
 BA.AutoFarmJotaro3.Size = UDim2.new(0, 318, 0, 32)
 BA.AutoFarmJotaro3.Visible = false
 BA.AutoFarmJotaro3.Font = Enum.Font.SourceSans
@@ -2332,7 +2333,7 @@ end)
 BA.AutoFarmClick.MouseButton1Down:connect(function()
 	getgenv().clickerr = true;
 
-	while wait(.7) do
+	while wait() do
 		if getgenv().clickerr == true then
 			local VirtualUser=game:service'VirtualUser'
 			VirtualUser:CaptureController()
@@ -2370,14 +2371,14 @@ end)
 BA.AutoFarmTools.MouseButton1Down:connect(function()
 	getgenv().autotools = true;
 
-	while wait() do
+	while wait(1) do
 		if getgenv().autotools == true then
 			char = game:GetService('Players').LocalPlayer.Character
 			game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
 				char = body end)
 			for i,v in pairs(workspace:GetDescendants()) do
 				if v:IsA('Tool') then
-					wait(1.2)
+					wait(1)
 					char.Humanoid:EquipTool(v) end end
 			workspace.DescendantAdded:connect(function(item)
 				pcall(function()
@@ -2396,7 +2397,7 @@ end)
 BA.AutoFarmTools2.MouseButton1Down:connect(function()
 	getgenv().autotools = false;
 
-	while wait() do
+	while wait(1) do
 		if getgenv().autotools == true then
 			char = game:GetService('Players').LocalPlayer.Character
 			game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
@@ -2456,17 +2457,20 @@ end)
 BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 	getgenv().quest = true;
 
-	while wait() do
+	while wait(1) do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			wait(1.2)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			wait(1.2)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(1.2)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 		end
 	end
 end)
@@ -2481,17 +2485,20 @@ end)
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 	getgenv().quest = false;
 
-	while wait() do
+	while wait(1) do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(1)
 		end
 	end
 end)
@@ -2605,13 +2612,13 @@ end)
 
 BA.ReduceDamageOff.MouseButton1Down:connect(function()
 	game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
-		getgenv().Reduce = false;
-		while wait() do
-			if getgenv().Reduce == true then
-				game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
-			end
+	getgenv().Reduce = false;
+	while wait() do
+		if getgenv().Reduce == true then
+			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
+		end
 	end
-	end)
+end)
 
 BA.ReflectDamageOn.MouseButton1Down:connect(function()
 	BA.Onreflect.Visible = true
@@ -2690,6 +2697,10 @@ BA.Purchase5.MouseButton1Down:connect(function()
 	game.ReplicatedStorage.Main.Shop.Buy:FireServer("UnberrelaHat")
 end)
 
+BA.Purchase1.MouseButton1Down:connect(function()
+	game.ReplicatedStorage.Main.Shop.Buy:FireServer("Requiem Arrow")
+end)
+
 BA.CheckWorth.MouseButton1Down:connect(function()
 	local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
@@ -2703,11 +2714,11 @@ BA.CheckWorth.MouseButton1Down:connect(function()
 
 	local VirtualUser=game:service'VirtualUser'
 	VirtualUser:CaptureController()
-	VirtualUser:ClickButton1(Vector2.new(999, 999, 999))
+	VirtualUser:ClickButton1(Vector2.new(999,999))
 	wait()
 	local VirtualUser=game:service'VirtualUser'
 	VirtualUser:CaptureController()
-	VirtualUser:ClickButton1(Vector2.new(999, 999, 999))
+	VirtualUser:ClickButton1(Vector2.new(999,999))
 	wait(1)
 
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
