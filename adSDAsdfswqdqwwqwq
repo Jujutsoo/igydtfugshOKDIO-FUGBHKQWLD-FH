@@ -2468,19 +2468,6 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 	end
 end)
 
-BA.AutoFarmJotaro4.MouseButton1Down:connect(function()
-	getgenv().quest = true;
-	while wait() do
-		if getgenv().quest == true then
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-		end
-	end
-end)
-
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
 	BA.Ons.Visible = false
 	BA.Offs.Visible = true
@@ -2502,18 +2489,6 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 	end
 end)
 
-BA.AutoFarmJotaro3.MouseButton1Down:connect(function()
-	getgenv().quest = false;
-	while wait() do
-		if getgenv().quest == true then
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-		end
-	end
-end)
 
 BA.HiddenSpot.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12393, 72.074859619141, -1229)
@@ -2749,3 +2724,10 @@ if GC then
 else
 end
 -- anti afk
+
+getgenv().gain = true;
+while wait() do
+	if getgenv().gain == true then
+		game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	end
+end
