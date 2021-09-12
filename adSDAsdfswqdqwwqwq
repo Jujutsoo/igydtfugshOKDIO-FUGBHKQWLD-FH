@@ -2456,9 +2456,8 @@ end)
 
 BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 	getgenv().quest = true;
-
-	while wait(1) do
-		if getgenv().quest == true then
+	while wait() do
+		if getgenv().name == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
@@ -2470,7 +2469,9 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
+			local VirtualUser=game:service'VirtualUser'
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton1(Vector2.new(999,999))
 		end
 	end
 end)
@@ -2483,10 +2484,9 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
 end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
-	getgenv().quest = false;
-
-	while wait(1) do
-		if getgenv().quest == true then
+	ggetgenv().quest = true;
+	while wait() do
+		if getgenv().name == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
@@ -2498,7 +2498,9 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
+			local VirtualUser=game:service'VirtualUser'
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton1(Vector2.new(999,999))
 		end
 	end
 end)
