@@ -2457,21 +2457,19 @@ end)
 BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 	getgenv().quest = true;
 	while wait() do
-		if getgenv().name == true then
+		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
+			wait(.5)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			local VirtualUser=game:service'VirtualUser'
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton1(Vector2.new(999,999))
+			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 		end
 	end
 end)
@@ -2486,21 +2484,19 @@ end)
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 	ggetgenv().quest = true;
 	while wait() do
-		if getgenv().name == true then
+		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(1)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
+			wait(.5)
 			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			local VirtualUser=game:service'VirtualUser'
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton1(Vector2.new(999,999))
+			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+			wait(.5)
+			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 		end
 	end
 end)
@@ -2725,3 +2721,17 @@ BA.CheckWorth.MouseButton1Down:connect(function()
 
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
+
+-- anti afk
+local GC = getconnections or get_signal_cons
+if GC then
+	for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+		if v["Disable"] then
+			v["Disable"](v)
+		elseif v["Disconnect"] then
+			v["Disconnect"](v)
+		end
+	end
+else
+end
+-- anti afk
