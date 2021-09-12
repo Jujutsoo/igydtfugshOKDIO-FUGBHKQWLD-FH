@@ -164,6 +164,7 @@ local BA = {
 	Ons = Instance.new("TextLabel"),
 	Offs = Instance.new("TextLabel"),
 	Exit = Instance.new("TextButton"),
+	Plus = Instance.new("TextButton"),
 	BackColor1 = Instance.new("Frame"),
 	GameName = Instance.new("TextLabel"),
 	TeleportsTab = Instance.new("ScrollingFrame"),
@@ -234,10 +235,8 @@ BA.XELTAB1.Name = "XELTAB1"
 BA.XELTAB1.Parent = BA.BA
 BA.XELTAB1.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.XELTAB1.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB1.Position = UDim2.new(0.0108652022, 0, 0.158102453, 0)
+BA.XELTAB1.Position = UDim2.new(-1, 0, 0.148, 0)
 BA.XELTAB1.Size = UDim2.new(0, 470, 0, 410)
-BA.XELTAB1.Active = true
-BA.XELTAB1.Draggable = true
 
 BA.Stands.Name = "Stands"
 BA.Stands.Parent = BA.XELTAB1
@@ -461,7 +460,7 @@ BA.areyousure.Name = "areyousure"
 BA.areyousure.Parent = BA.ExtraTab
 BA.areyousure.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.areyousure.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure.Position = UDim2.new(1.03930223, 0, -0.134681299, 0)
+BA.areyousure.Position = UDim2.new(4, 0, -0.135, 0)
 BA.areyousure.Size = UDim2.new(0, 242, 0, 175)
 BA.areyousure.Visible = false
 
@@ -545,7 +544,7 @@ BA.areyousure2.Name = "areyousure2"
 BA.areyousure2.Parent = BA.ExtraTab
 BA.areyousure2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.areyousure2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure2.Position = UDim2.new(1.03900003, 0, -0.135000005, 0)
+BA.areyousure2.Position = UDim2.new(4, 0, -0.135, 0)
 BA.areyousure2.Size = UDim2.new(0, 242, 0, 175)
 BA.areyousure2.Visible = false
 
@@ -1665,10 +1664,26 @@ BA.Exit.Position = UDim2.new(0.938297868, 0, 0.038714923, 0)
 BA.Exit.Size = UDim2.new(0, 21, 0, 14)
 BA.Exit.AutoButtonColor = false
 BA.Exit.Font = Enum.Font.Jura
-BA.Exit.Text = "X"
+BA.Exit.Text = ">"
 BA.Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
 BA.Exit.TextSize = 41.000
 BA.Exit.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BA.Exit.Rotation = 90
+
+BA.Plus.Name = "Plus"
+BA.Plus.Parent = BA.XELTAB1
+BA.Plus.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
+BA.Plus.BackgroundTransparency = 1.000
+BA.Plus.BorderColor3 = Color3.fromRGB(29, 31, 32)
+BA.Plus.Position = UDim2.new(0.938297868, 0, 0.038714923, 0)
+BA.Plus.Size = UDim2.new(0, 21, 0, 14)
+BA.Plus.AutoButtonColor = false
+BA.Plus.Font = Enum.Font.Jura
+BA.Plus.Text = ">"
+BA.Plus.TextColor3 = Color3.fromRGB(255, 255, 255)
+BA.Plus.TextSize = 41.000
+BA.Plus.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+BA.Plus.Rotation = 270
 
 BA.BackColor1.Name = "BackColor1"
 BA.BackColor1.Parent = BA.XELTAB1
@@ -1977,7 +1992,7 @@ BA.XELTAB2.Name = "XELTAB2"
 BA.XELTAB2.Parent = BA.XELTAB1
 BA.XELTAB2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
 BA.XELTAB2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB2.Position = UDim2.new(1.01914883, 0, 0, 0)
+BA.XELTAB2.Position = UDim2.new(3.5, 0, 0, 0)
 BA.XELTAB2.Size = UDim2.new(0, 281, 0, 410)
 BA.XELTAB2.Visible = false
 
@@ -2194,8 +2209,8 @@ end)
 
 BA.SupportedGames.MouseButton1Down:connect(function()
 	BA.XELTAB2.Visible = true
-	BA.areyousure2.Visivle = false
-	BA.areyousure.Visivle = false
+	BA.areyousure2.Visivle = true
+	BA.areyousure.Visivle = true
 end)
 
 BA.Teleports.MouseButton1Down:connect(function()
@@ -2208,9 +2223,6 @@ BA.Teleports.MouseButton1Down:connect(function()
 	BA.TeleportsTab.Visible = true
 end)
 
-BA.No.MouseButton1Down:connect(function()
-	BA.areyousure.Visible = false
-end)
 
 BA.Yes.MouseButton1Down:connect(function()
 	local ts = game:GetService("TeleportService")
@@ -2226,9 +2238,6 @@ BA.Yes2.MouseButton1Down:connect(function()
 	game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
 end)
 
-BA.No2.MouseButton1Down:connect(function()
-	BA.areyousure2.Visible = false
-end)
 
 BA.GrabTools.MouseButton1Down:connect(function()
 	char = game:GetService('Players').LocalPlayer.Character
@@ -2245,14 +2254,14 @@ end)
 
 BA.Rejoin.MouseButton1Down:connect(function()
 	BA.areyousure.Visible = true
-	BA.areyousure2.Visible = false
-	BA.XELTAB2.Visible = false
+	BA.areyousure2.Visible = true
+	BA.XELTAB2.Visible = true
 end)
 
 BA.ServerHop.MouseButton1Down:connect(function()
 	BA.areyousure2.Visible = true
-	BA.areyousure.Visible = false
-	BA.XELTAB2.Visible = false
+	BA.areyousure.Visible = true
+	BA.XELTAB2.Visible = true
 end)
 
 BA.ItemsTab.Slot1.MouseButton1Down:connect(function()
@@ -2460,10 +2469,23 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
+			wait(2)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
+			wait(2)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
+			wait(2)
+		end
+	end
+end)
+
+BA.AutoFarmJotaro4.MouseButton1Down:connect(function()
+	getgenv().pp = true;
+
+	while wait(1) do
+		if getgenv().pp == true then
+			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
 		end
 	end
 end)
@@ -2477,14 +2499,28 @@ end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 	getgenv().quest = false;
+
 	while wait() do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
+			wait(2)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
+			wait(2)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
+			wait(2)
+		end
+	end
+end)
+
+BA.AutoFarmJotaro3.MouseButton1Down:connect(function()
+	getgenv().pp = false;
+
+	while wait(1) do
+		if getgenv().pp == true then
+			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
 		end
 	end
 end)
@@ -2566,13 +2602,137 @@ BA.GetGameLink1.MouseButton1Down:connect(function()
 	setclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
 end)
 
-BA.Exit.MouseButton1Down:connect(function()
-	BA.XELTAB1.Visible = false
+local X1 = BA.XELTAB1
+local X = BA.XELTAB1.Exit
+
+X.MouseButton1Click:connect(function()
+
+	X1:TweenPosition(
+		UDim2.new(-0, 0, 0.94, 0), -- End Position
+		"Out", -- Easing Direction
+		"Quint", -- Easing Style
+		1, -- Time In Seconds
+		false, -- Override Other Tweens
+		nil
+	)
 end)
 
-BA.Exit_2.MouseButton1Down:connect(function()
-	BA.XELTAB2.Visible = false
+
+local X2 = BA.XELTAB1
+
+X2:TweenPosition(
+	UDim2.new(-0, 0, 0.148, 0), -- End Position
+	"Out", -- Easing Direction
+	"Quint", -- Easing Style
+	1, -- Time In Seconds
+	false, -- Override Other Tweens
+	nil
+)
+
+
+local X1 = BA.XELTAB1
+local X = BA.XELTAB1.Plus
+
+X.MouseButton1Click:connect(function()
+
+
+	X1:TweenPosition(
+		UDim2.new(-0, 0, 0.148, 0), -- End Position
+		"Out", -- Easing Direction
+		"Quint", -- Easing Style
+		1, -- Time In Seconds
+		false, -- Override Other Tweens
+		nil
+	)
 end)
+
+BA.Exit.MouseButton1Down:connect(function() -- 
+	BA.Exit.TextTransparency = 0.1
+	wait(.01)
+	BA.Exit.TextTransparency = 0.2
+	wait(.01)
+	BA.Exit.TextTransparency = 0.3
+	wait(.01)
+	BA.Exit.TextTransparency = 0.4
+	wait(.01)
+	BA.Exit.TextTransparency = 0.5
+	wait(.01)
+	BA.Exit.TextTransparency = 0.6
+	wait(.01)
+	BA.Exit.TextTransparency = 0.7
+	wait(.01)
+	BA.Exit.TextTransparency = 0.8
+	wait(.01)
+	BA.Exit.TextTransparency = 0.9
+	wait(.01)
+	BA.Exit.TextTransparency = 1
+	BA.Exit.Visible = false
+	BA.Plus.TextTransparency = 1
+	BA.Plus.Visible = true
+	BA.Plus.TextTransparency = 0.9
+	wait(.01)
+	BA.Plus.TextTransparency = 0.8
+	wait(.01)
+	BA.Plus.TextTransparency = 0.7
+	wait(.01)
+	BA.Plus.TextTransparency = 0.6
+	wait(.01)
+	BA.Plus.TextTransparency = 0.5
+	wait(.01)
+	BA.Plus.TextTransparency = 0.4
+	wait(.01)
+	BA.Plus.TextTransparency = 0.3
+	wait(.01)
+	BA.Plus.TextTransparency = 0.2
+	wait(.01)
+	BA.Plus.TextTransparency = 0.1
+	wait(.01)
+end)
+
+BA.Plus.MouseButton1Down:connect(function()
+	BA.Plus.TextTransparency = 0.1
+	wait(.01)
+	BA.Plus.TextTransparency = 0.2
+	wait(.01)
+	BA.Plus.TextTransparency = 0.3
+	wait(.01)
+	BA.Plus.TextTransparency = 0.4
+	wait(.01)
+	BA.Plus.TextTransparency = 0.5
+	wait(.01)
+	BA.Plus.TextTransparency = 0.6
+	wait(.01)
+	BA.Plus.TextTransparency = 0.7
+	wait(.01)
+	BA.Plus.TextTransparency = 0.8
+	wait(.01)
+	BA.Plus.TextTransparency = 0.9
+	wait(.01)
+	BA.Plus.TextTransparency = 1
+	BA.Plus.Visible = false
+	BA.Exit.TextTransparency = 1
+	BA.Exit.Visible = true
+	BA.Exit.TextTransparency = 0.9
+	wait(.01)
+	BA.Exit.TextTransparency = 0.8
+	wait(.01)
+	BA.Exit.TextTransparency = 0.7
+	wait(.01)
+	BA.Exit.TextTransparency = 0.6
+	wait(.01)
+	BA.Exit.TextTransparency = 0.5
+	wait(.01)
+	BA.Exit.TextTransparency = 0.4
+	wait(.01)
+	BA.Exit.TextTransparency = 0.3
+	wait(.01)
+	BA.Exit.TextTransparency = 0.2
+	wait(.01)
+	BA.Exit.TextTransparency = 0.1
+	wait(.01)
+end)
+
+BA.Plus.Visible = false
 
 BA.ReduceDamageOn.MouseButton1Down:connect(function()
 	BA.Onrd.Visible = true
@@ -2711,7 +2871,6 @@ BA.CheckWorth.MouseButton1Down:connect(function()
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
 
--- anti afk
 local GC = getconnections or get_signal_cons
 if GC then
 	for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
@@ -2722,5 +2881,10 @@ if GC then
 		end
 	end
 else
-end
--- anti afk
+end	
+
+BA.ResetOnSpawn = false
+BA.XELTAB1.Active = true
+BA.XELTAB1.Draggable = false
+BA.XELTAB2.ZIndex = 0
+BA.XELTAB1.ZIndex = 1
