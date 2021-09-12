@@ -2464,14 +2464,13 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 		end
 	end
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	wait(1)
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	wait(1)
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
@@ -2482,7 +2481,7 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
 end)
 
 BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
-	ggetgenv().quest = true;
+	getgenv().quest = false;
 	while wait() do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
@@ -2491,14 +2490,13 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
-			wait(.5)
-			game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 		end
 	end
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	wait(1)
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
+	wait(1)
+	game.Players.LocalPlayer.Backpack["Big Money Stack"].Parent = game.Players.LocalPlayer.Character
 end)
 
 BA.HiddenSpot.MouseButton1Down:connect(function()
