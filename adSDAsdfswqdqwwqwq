@@ -2719,6 +2719,53 @@ BA.Exit.MouseButton1Down:connect(function() --
 	wait(.01)
 end)
 
+BA.Exit.MouseButton1Down:connect(function() -- 
+	BA.XelHubTitle.TextTransparency = 0.1
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.2
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.3
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.4
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.5
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.6
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.7
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.8
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.9
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 1
+	BA.XelHubTitle.Visible = false
+end)
+
+BA.Plus.MouseButton1Down:connect(function() 
+	wait(.2)
+	BA.XelHubTitle.Visible = true
+	BA.XelHubTitle.TextTransparency = 0.9
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.8
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.7
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.6
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.5
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.4
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.3
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.2
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0.1
+	wait(.01)
+	BA.XelHubTitle.TextTransparency = 0
+end)
+
 BA.Plus.MouseButton1Down:connect(function()
 	BA.Plus.TextTransparency = 0.1
 	wait(.01)
