@@ -2470,13 +2470,13 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			wait(2)
+			wait(3)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			wait(2)
+			wait(3)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(2)
+			wait(3)
 		end
 	end
 end)
@@ -2505,13 +2505,13 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", true)
-			wait(2)
+			wait(3)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Gucci", true)
-			wait(2)
+			wait(3)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", false)
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Turtle", true)
-			wait(2)
+			wait(3)
 		end
 	end
 end)
