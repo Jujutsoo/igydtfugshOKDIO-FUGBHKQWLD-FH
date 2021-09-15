@@ -1,2471 +1,50 @@
-local BA = {
-	BA = Instance.new("ScreenGui"),
-	XELTAB1 = Instance.new("Frame"),
-	Stands = Instance.new("TextButton"),
-	UICorner = Instance.new("UICorner"),
-	Shop = Instance.new("TextButton"),
-	UICorner_2 = Instance.new("UICorner"),
-	Home = Instance.new("TextButton"),
-	UICorner_3 = Instance.new("UICorner"),
-	Extra = Instance.new("TextButton"),
-	UICorner_4 = Instance.new("UICorner"),
-	XelHubTitle = Instance.new("TextLabel"),
-	StandsTab = Instance.new("Frame"),
-	StandsTitle = Instance.new("TextButton"),
-	UICorner_5 = Instance.new("UICorner"),
-	Slot1 = Instance.new("TextButton"),
-	UICorner_6 = Instance.new("UICorner"),
-	Slot2 = Instance.new("TextButton"),
-	UICorner_7 = Instance.new("UICorner"),
-	Slot3 = Instance.new("TextButton"),
-	UICorner_8 = Instance.new("UICorner"),
-	Slot4 = Instance.new("TextButton"),
-	UICorner_9 = Instance.new("UICorner"),
-	Slot5 = Instance.new("TextButton"),
-	UICorner_10 = Instance.new("UICorner"),
-	Slot6 = Instance.new("TextButton"),
-	UICorner_11 = Instance.new("UICorner"),
-	Slot7 = Instance.new("TextButton"),
-	UICorner_12 = Instance.new("UICorner"),
-	ExtraTab = Instance.new("Frame"),
-	areyousure = Instance.new("Frame"),
-	Yes = Instance.new("TextButton"),
-	UICorner_13 = Instance.new("UICorner"),
-	No = Instance.new("TextButton"),
-	UICorner_14 = Instance.new("UICorner"),
-	rusure = Instance.new("TextLabel"),
-	BackColor3 = Instance.new("Frame"),
-	Whatitdo = Instance.new("TextLabel"),
-	Whatitdo2 = Instance.new("TextLabel"),
-	areyousure2 = Instance.new("Frame"),
-	Yes2 = Instance.new("TextButton"),
-	UICorner_15 = Instance.new("UICorner"),
-	No2 = Instance.new("TextButton"),
-	UICorner_16 = Instance.new("UICorner"),
-	rusure2 = Instance.new("TextLabel"),
-	BackColor3_2 = Instance.new("Frame"),
-	Whatitdo3 = Instance.new("TextLabel"),
-	Whatitdo4 = Instance.new("TextLabel"),
-	ExtraTitle = Instance.new("TextButton"),
-	UICorner_17 = Instance.new("UICorner"),
-	Rejoin = Instance.new("TextButton"),
-	UICorner_18 = Instance.new("UICorner"),
-	GrabTools = Instance.new("TextButton"),
-	UICorner_19 = Instance.new("UICorner"),
-	ServerHop = Instance.new("TextButton"),
-	UICorner_20 = Instance.new("UICorner"),
-	DamageReducer = Instance.new("Frame"),
-	Offrd = Instance.new("TextLabel"),
-	Onrd = Instance.new("TextLabel"),
-	ReduceDamageOff = Instance.new("TextButton"),
-	UICorner_21 = Instance.new("UICorner"),
-	ReduceDamageOn = Instance.new("TextButton"),
-	UICorner_22 = Instance.new("UICorner"),
-	DamageReflector = Instance.new("Frame"),
-	Offreflect = Instance.new("TextLabel"),
-	Onreflect = Instance.new("TextLabel"),
-	ReflectDamageOff = Instance.new("TextButton"),
-	UICorner_23 = Instance.new("UICorner"),
-	ReflectDamageOn = Instance.new("TextButton"),
-	UICorner_24 = Instance.new("UICorner"),
-	AntiTimeStopper = Instance.new("Frame"),
-	OffATS = Instance.new("TextLabel"),
-	OnATS = Instance.new("TextLabel"),
-	ATSOff = Instance.new("TextButton"),
-	UICorner_25 = Instance.new("UICorner"),
-	ATSOn = Instance.new("TextButton"),
-	UICorner_26 = Instance.new("UICorner"),
-	CheckWorth = Instance.new("TextButton"),
-	UICorner_27 = Instance.new("UICorner"),
-	ShopTab = Instance.new("Frame"),
-	ShopTitle = Instance.new("TextButton"),
-	UICorner_28 = Instance.new("UICorner"),
-	ChangeTrait = Instance.new("TextButton"),
-	UICorner_29 = Instance.new("UICorner"),
-	Purchase1 = Instance.new("TextButton"),
-	UICorner_30 = Instance.new("UICorner"),
-	DerosStick = Instance.new("TextButton"),
-	UICorner_31 = Instance.new("UICorner"),
-	Roka = Instance.new("TextButton"),
-	UICorner_32 = Instance.new("UICorner"),
-	Arrow = Instance.new("TextButton"),
-	UICorner_33 = Instance.new("UICorner"),
-	Purchase2 = Instance.new("TextButton"),
-	UICorner_34 = Instance.new("UICorner"),
-	Purchase3 = Instance.new("TextButton"),
-	UICorner_35 = Instance.new("UICorner"),
-	Purchase4 = Instance.new("TextButton"),
-	UICorner_36 = Instance.new("UICorner"),
-	Purchase5 = Instance.new("TextButton"),
-	UICorner_37 = Instance.new("UICorner"),
-	Umbrella = Instance.new("TextButton"),
-	UICorner_38 = Instance.new("UICorner"),
-	ItemsTab = Instance.new("Frame"),
-	ItemsTitle = Instance.new("TextButton"),
-	UICorner_39 = Instance.new("UICorner"),
-	Slot1_2 = Instance.new("TextButton"),
-	UICorner_40 = Instance.new("UICorner"),
-	Slot2_2 = Instance.new("TextButton"),
-	UICorner_41 = Instance.new("UICorner"),
-	Slot3_2 = Instance.new("TextButton"),
-	UICorner_42 = Instance.new("UICorner"),
-	Slot4_2 = Instance.new("TextButton"),
-	UICorner_43 = Instance.new("UICorner"),
-	Slot5_2 = Instance.new("TextButton"),
-	UICorner_44 = Instance.new("UICorner"),
-	Slot7_2 = Instance.new("TextButton"),
-	UICorner_45 = Instance.new("UICorner"),
-	Slot6_2 = Instance.new("TextButton"),
-	UICorner_46 = Instance.new("UICorner"),
-	HomeTab = Instance.new("Frame"),
-	HomeTitle = Instance.new("TextButton"),
-	UICorner_47 = Instance.new("UICorner"),
-	Version = Instance.new("TextButton"),
-	UICorner_48 = Instance.new("UICorner"),
-	Credits = Instance.new("TextButton"),
-	UICorner_49 = Instance.new("UICorner"),
-	LastUpdated = Instance.new("TextButton"),
-	UICorner_50 = Instance.new("UICorner"),
-	Discord = Instance.new("TextButton"),
-	UICorner_51 = Instance.new("UICorner"),
-	Main = Instance.new("TextButton"),
-	UICorner_52 = Instance.new("UICorner"),
-	ItemStorage = Instance.new("TextButton"),
-	UICorner_53 = Instance.new("UICorner"),
-	MainTab = Instance.new("Frame"),
-	MainTitle = Instance.new("TextButton"),
-	UICorner_54 = Instance.new("UICorner"),
-	AutoJ = Instance.new("Frame"),
-	AutoFarmJotaro = Instance.new("TextButton"),
-	UICorner_55 = Instance.new("UICorner"),
-	AutoFarmJotaro2 = Instance.new("TextButton"),
-	UICorner_56 = Instance.new("UICorner"),
-	Onj = Instance.new("TextLabel"),
-	Offj = Instance.new("TextLabel"),
-	AutoG = Instance.new("Frame"),
-	AutoFarmTools = Instance.new("TextButton"),
-	UICorner_57 = Instance.new("UICorner"),
-	AutoFarmTools2 = Instance.new("TextButton"),
-	UICorner_58 = Instance.new("UICorner"),
-	Ong = Instance.new("TextLabel"),
-	Offg = Instance.new("TextLabel"),
-	AutoC = Instance.new("Frame"),
-	AutoFarmClick2 = Instance.new("TextButton"),
-	UICorner_59 = Instance.new("UICorner"),
-	AutoFarmClick = Instance.new("TextButton"),
-	UICorner_60 = Instance.new("UICorner"),
-	Onc = Instance.new("TextLabel"),
-	Offc = Instance.new("TextLabel"),
-	AutoQ = Instance.new("Frame"),
-	AutoFarmJotaro4 = Instance.new("TextButton"),
-	UICorner_61 = Instance.new("UICorner"),
-	AutoFarmJotaro3 = Instance.new("TextButton"),
-	UICorner_62 = Instance.new("UICorner"),
-	Ons = Instance.new("TextLabel"),
-	Offs = Instance.new("TextLabel"),
-	Exit = Instance.new("TextButton"),
-	Plus = Instance.new("TextButton"),
-	BackColor1 = Instance.new("Frame"),
-	GameName = Instance.new("TextLabel"),
-	TeleportsTab = Instance.new("ScrollingFrame"),
-	HiddenSpot = Instance.new("TextButton"),
-	UICorner_63 = Instance.new("UICorner"),
-	Bank = Instance.new("TextButton"),
-	UICorner_64 = Instance.new("UICorner"),
-	Pizza = Instance.new("TextButton"),
-	UICorner_65 = Instance.new("UICorner"),
-	BasketballCourt = Instance.new("TextButton"),
-	UICorner_66 = Instance.new("UICorner"),
-	Roller = Instance.new("TextButton"),
-	UICorner_67 = Instance.new("UICorner"),
-	Arcade = Instance.new("TextButton"),
-	UICorner_68 = Instance.new("UICorner"),
-	Shop_2 = Instance.new("TextButton"),
-	UICorner_69 = Instance.new("UICorner"),
-	Smith = Instance.new("TextButton"),
-	UICorner_70 = Instance.new("UICorner"),
-	Lemon = Instance.new("TextButton"),
-	UICorner_71 = Instance.new("UICorner"),
-	Sucun = Instance.new("TextButton"),
-	UICorner_72 = Instance.new("UICorner"),
-	Mv = Instance.new("TextButton"),
-	UICorner_73 = Instance.new("UICorner"),
-	Exeryze = Instance.new("TextButton"),
-	UICorner_74 = Instance.new("UICorner"),
-	Room = Instance.new("TextButton"),
-	UICorner_75 = Instance.new("UICorner"),
-	ZsBridge = Instance.new("TextButton"),
-	UICorner_76 = Instance.new("UICorner"),
-	Zs = Instance.new("TextButton"),
-	UICorner_77 = Instance.new("UICorner"),
-	ZsKey = Instance.new("TextButton"),
-	UICorner_78 = Instance.new("UICorner"),
-	Hidden = Instance.new("TextButton"),
-	UICorner_79 = Instance.new("UICorner"),
-	TeleportsTitle = Instance.new("TextButton"),
-	UICorner_80 = Instance.new("UICorner"),
-	XELTAB2 = Instance.new("Frame"),
-	Exit_2 = Instance.new("TextButton"),
-	BackColor2 = Instance.new("ScrollingFrame"),
-	SupportedTitle = Instance.new("TextButton"),
-	UICorner_81 = Instance.new("UICorner"),
-	BizzareAdventures = Instance.new("TextButton"),
-	UICorner_82 = Instance.new("UICorner"),
-	MythPiece = Instance.new("TextButton"),
-	UICorner_83 = Instance.new("UICorner"),
-	GetGameLink2 = Instance.new("TextButton"),
-	UICorner_84 = Instance.new("UICorner"),
-	GetGameLink1 = Instance.new("TextButton"),
-	UICorner_85 = Instance.new("UICorner"),
-	XelHubTitle2 = Instance.new("TextLabel"),
-	Teleports = Instance.new("TextButton"),
-	UICorner_86 = Instance.new("UICorner"),
-	SupportedGames = Instance.new("TextButton"),
-	UICorner_87 = Instance.new("UICorner"),
-}
-
---Properties:
-
-BA.BA.Name = "BA"
-BA.BA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-BA.BA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-BA.BA.ResetOnSpawn = false
-
-BA.XELTAB1.Name = "XELTAB1"
-BA.XELTAB1.Parent = BA.BA
-BA.XELTAB1.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB1.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB1.Position = UDim2.new(-1, 0, 0.148, 0)
-BA.XELTAB1.Size = UDim2.new(0, 470, 0, 410)
-
-BA.Stands.Name = "Stands"
-BA.Stands.Parent = BA.XELTAB1
-BA.Stands.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Stands.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Stands.Position = UDim2.new(0.00887233671, 0, 0.537536561, 0)
-BA.Stands.Size = UDim2.new(0, 126, 0, 35)
-BA.Stands.Font = Enum.Font.SourceSans
-BA.Stands.Text = "Stand Storage"
-BA.Stands.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Stands.TextSize = 14.000
-BA.Stands.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner.CornerRadius = UDim.new(0, 5)
-BA.UICorner.Parent = BA.Stands
-
-BA.Shop.Name = "Shop"
-BA.Shop.Parent = BA.XELTAB1
-BA.Shop.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Shop.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Shop.Position = UDim2.new(0.00887233671, 0, 0.436292708, 0)
-BA.Shop.Size = UDim2.new(0, 126, 0, 34)
-BA.Shop.Font = Enum.Font.SourceSans
-BA.Shop.Text = "Shop"
-BA.Shop.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Shop.TextSize = 14.000
-BA.Shop.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_2.CornerRadius = UDim.new(0, 5)
-BA.UICorner_2.Parent = BA.Shop
-
-BA.Home.Name = "Home"
-BA.Home.Parent = BA.XELTAB1
-BA.Home.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Home.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Home.Position = UDim2.new(0.0106382975, 0, 0.121223174, 0)
-BA.Home.Size = UDim2.new(0, 126, 0, 35)
-BA.Home.Font = Enum.Font.SourceSans
-BA.Home.Text = "Home"
-BA.Home.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Home.TextSize = 14.000
-BA.Home.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_3.CornerRadius = UDim.new(0, 5)
-BA.UICorner_3.Parent = BA.Home
-
-BA.Extra.Name = "Extra"
-BA.Extra.Parent = BA.XELTAB1
-BA.Extra.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Extra.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Extra.Position = UDim2.new(0.00887233671, 0, 0.331455737, 0)
-BA.Extra.Size = UDim2.new(0, 126, 0, 35)
-BA.Extra.Font = Enum.Font.SourceSans
-BA.Extra.Text = "Extra"
-BA.Extra.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Extra.TextSize = 14.000
-BA.Extra.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_4.CornerRadius = UDim.new(0, 5)
-BA.UICorner_4.Parent = BA.Extra
-
-BA.XelHubTitle.Name = "XelHubTitle"
-BA.XelHubTitle.Parent = BA.XELTAB1
-BA.XelHubTitle.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.XelHubTitle.BackgroundTransparency = 1.000
-BA.XelHubTitle.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.XelHubTitle.Position = UDim2.new(0.0106382668, 0, 0.0246800296, 0)
-BA.XelHubTitle.Size = UDim2.new(0, 102, 0, 25)
-BA.XelHubTitle.Font = Enum.Font.Jura
-BA.XelHubTitle.Text = "Xel Hub"
-BA.XelHubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.XelHubTitle.TextSize = 39.000
-BA.XelHubTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.StandsTab.Name = "StandsTab"
-BA.StandsTab.Parent = BA.XELTAB1
-BA.StandsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.StandsTab.BackgroundTransparency = 1.000
-BA.StandsTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
-BA.StandsTab.Size = UDim2.new(0, 334, 0, 361)
-BA.StandsTab.Visible = false
-
-BA.StandsTitle.Name = "StandsTitle"
-BA.StandsTitle.Parent = BA.StandsTab
-BA.StandsTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.StandsTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.StandsTitle.Position = UDim2.new(0.0240000002, 0, 0.0289999992, 0)
-BA.StandsTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.StandsTitle.AutoButtonColor = false
-BA.StandsTitle.Font = Enum.Font.SourceSans
-BA.StandsTitle.Text = "ㅤStands | Storage"
-BA.StandsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.StandsTitle.TextSize = 14.000
-BA.StandsTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.StandsTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_5.CornerRadius = UDim.new(0, 5)
-BA.UICorner_5.Parent = BA.StandsTitle
-
-BA.Slot1.Name = "Slot1"
-BA.Slot1.Parent = BA.StandsTab
-BA.Slot1.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot1.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot1.Position = UDim2.new(0.0239520967, 0, 0.153579995, 0)
-BA.Slot1.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot1.Font = Enum.Font.SourceSans
-BA.Slot1.Text = "ㅤSlot 1"
-BA.Slot1.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot1.TextSize = 14.000
-BA.Slot1.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot1.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_6.CornerRadius = UDim.new(0, 5)
-BA.UICorner_6.Parent = BA.Slot1
-
-BA.Slot2.Name = "Slot2"
-BA.Slot2.Parent = BA.StandsTab
-BA.Slot2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot2.Position = UDim2.new(0.0239520967, 0, 0.272755355, 0)
-BA.Slot2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot2.Font = Enum.Font.SourceSans
-BA.Slot2.Text = "ㅤSlot 2"
-BA.Slot2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot2.TextSize = 14.000
-BA.Slot2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_7.CornerRadius = UDim.new(0, 5)
-BA.UICorner_7.Parent = BA.Slot2
-
-BA.Slot3.Name = "Slot3"
-BA.Slot3.Parent = BA.StandsTab
-BA.Slot3.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot3.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot3.Position = UDim2.new(0.0239520967, 0, 0.387337923, 0)
-BA.Slot3.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot3.Font = Enum.Font.SourceSans
-BA.Slot3.Text = "ㅤSlot 3"
-BA.Slot3.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot3.TextSize = 14.000
-BA.Slot3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot3.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_8.CornerRadius = UDim.new(0, 5)
-BA.UICorner_8.Parent = BA.Slot3
-
-BA.Slot4.Name = "Slot4"
-BA.Slot4.Parent = BA.StandsTab
-BA.Slot4.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot4.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot4.Position = UDim2.new(0.0239520967, 0, 0.506513298, 0)
-BA.Slot4.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot4.Font = Enum.Font.SourceSans
-BA.Slot4.Text = "ㅤSlot 4"
-BA.Slot4.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot4.TextSize = 14.000
-BA.Slot4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot4.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_9.CornerRadius = UDim.new(0, 5)
-BA.UICorner_9.Parent = BA.Slot4
-
-BA.Slot5.Name = "Slot5"
-BA.Slot5.Parent = BA.StandsTab
-BA.Slot5.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot5.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot5.Position = UDim2.new(0.0239520967, 0, 0.626636028, 0)
-BA.Slot5.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot5.Font = Enum.Font.SourceSans
-BA.Slot5.Text = "ㅤSlot 5"
-BA.Slot5.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot5.TextSize = 14.000
-BA.Slot5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot5.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_10.CornerRadius = UDim.new(0, 5)
-BA.UICorner_10.Parent = BA.Slot5
-
-BA.Slot6.Name = "Slot6"
-BA.Slot6.Parent = BA.StandsTab
-BA.Slot6.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot6.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot6.Position = UDim2.new(0.0240000002, 0, 0.745999992, 0)
-BA.Slot6.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot6.Font = Enum.Font.SourceSans
-BA.Slot6.Text = "ㅤSlot 6"
-BA.Slot6.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot6.TextSize = 14.000
-BA.Slot6.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot6.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_11.CornerRadius = UDim.new(0, 5)
-BA.UICorner_11.Parent = BA.Slot6
-
-BA.Slot7.Name = "Slot7"
-BA.Slot7.Parent = BA.StandsTab
-BA.Slot7.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot7.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot7.Position = UDim2.new(0.0209999997, 0, 0.864000022, 0)
-BA.Slot7.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot7.Font = Enum.Font.SourceSans
-BA.Slot7.Text = "ㅤSlot 7"
-BA.Slot7.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot7.TextSize = 14.000
-BA.Slot7.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot7.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_12.CornerRadius = UDim.new(0, 5)
-BA.UICorner_12.Parent = BA.Slot7
-
-BA.ExtraTab.Name = "ExtraTab"
-BA.ExtraTab.Parent = BA.XELTAB1
-BA.ExtraTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.ExtraTab.BackgroundTransparency = 1.000
-BA.ExtraTab.Position = UDim2.new(0.289000005, 0, 0.118000001, 0)
-BA.ExtraTab.Size = UDim2.new(0, 334, 0, 361)
-BA.ExtraTab.Visible = false
-
-BA.areyousure.Name = "areyousure"
-BA.areyousure.Parent = BA.ExtraTab
-BA.areyousure.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure.Position = UDim2.new(4, 0, -0.135, 0)
-BA.areyousure.Size = UDim2.new(0, 242, 0, 175)
-BA.areyousure.Visible = false
-
-BA.Yes.Name = "Yes"
-BA.Yes.Parent = BA.areyousure
-BA.Yes.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Yes.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Yes.Position = UDim2.new(0.0198199097, 0, 0.334317505, 0)
-BA.Yes.Size = UDim2.new(0, 230, 0, 32)
-BA.Yes.AutoButtonColor = false
-BA.Yes.Font = Enum.Font.SourceSans
-BA.Yes.Text = "Yes"
-BA.Yes.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Yes.TextSize = 32.000
-BA.Yes.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_13.CornerRadius = UDim.new(0, 5)
-BA.UICorner_13.Parent = BA.Yes
-
-BA.No.Name = "No"
-BA.No.Parent = BA.areyousure
-BA.No.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.No.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.No.Position = UDim2.new(0.0198199078, 0, 0.591460526, 0)
-BA.No.Size = UDim2.new(0, 230, 0, 32)
-BA.No.AutoButtonColor = false
-BA.No.Font = Enum.Font.SourceSans
-BA.No.Text = "No"
-BA.No.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.No.TextSize = 32.000
-BA.No.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_14.CornerRadius = UDim.new(0, 5)
-BA.UICorner_14.Parent = BA.No
-
-BA.rusure.Name = "rusure"
-BA.rusure.Parent = BA.areyousure
-BA.rusure.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.rusure.BackgroundTransparency = 1.000
-BA.rusure.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.rusure.Position = UDim2.new(0.287497759, 0, 0.0540876873, 0)
-BA.rusure.Size = UDim2.new(0, 102, 0, 25)
-BA.rusure.Font = Enum.Font.Jura
-BA.rusure.Text = "Rejoin?"
-BA.rusure.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.rusure.TextSize = 41.000
-
-BA.BackColor3.Name = "BackColor3"
-BA.BackColor3.Parent = BA.areyousure
-BA.BackColor3.BackgroundColor3 = Color3.fromRGB(34, 38, 43)
-BA.BackColor3.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.BackColor3.Position = UDim2.new(0, 0, 0.280000001, 0)
-BA.BackColor3.Size = UDim2.new(0, 242, 0, 126)
-BA.BackColor3.ZIndex = 0
-
-BA.Whatitdo.Name = "Whatitdo"
-BA.Whatitdo.Parent = BA.areyousure
-BA.Whatitdo.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo.BackgroundTransparency = 1.000
-BA.Whatitdo.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo.Position = UDim2.new(0.287497759, 0, 0.774087727, 0)
-BA.Whatitdo.Size = UDim2.new(0, 102, 0, 25)
-BA.Whatitdo.Font = Enum.Font.Jura
-BA.Whatitdo.Text = "This Will Cause You To Rejoin"
-BA.Whatitdo.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Whatitdo.TextSize = 15.000
-
-BA.Whatitdo2.Name = "Whatitdo2"
-BA.Whatitdo2.Parent = BA.areyousure
-BA.Whatitdo2.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo2.BackgroundTransparency = 1.000
-BA.Whatitdo2.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo2.Position = UDim2.new(0.287497759, 0, 0.85408771, 0)
-BA.Whatitdo2.Size = UDim2.new(0, 102, 0, 25)
-BA.Whatitdo2.Font = Enum.Font.Jura
-BA.Whatitdo2.Text = "This Current Server."
-BA.Whatitdo2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Whatitdo2.TextSize = 15.000
-
-BA.areyousure2.Name = "areyousure2"
-BA.areyousure2.Parent = BA.ExtraTab
-BA.areyousure2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.areyousure2.Position = UDim2.new(4, 0, -0.135, 0)
-BA.areyousure2.Size = UDim2.new(0, 242, 0, 175)
-BA.areyousure2.Visible = false
-
-BA.Yes2.Name = "Yes2"
-BA.Yes2.Parent = BA.areyousure2
-BA.Yes2.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Yes2.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Yes2.Position = UDim2.new(0.0199999996, 0, 0.333999991, 0)
-BA.Yes2.Size = UDim2.new(0, 230, 0, 32)
-BA.Yes2.AutoButtonColor = false
-BA.Yes2.Font = Enum.Font.SourceSans
-BA.Yes2.Text = "Yes"
-BA.Yes2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Yes2.TextSize = 32.000
-BA.Yes2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_15.CornerRadius = UDim.new(0, 5)
-BA.UICorner_15.Parent = BA.Yes2
-
-BA.No2.Name = "No2"
-BA.No2.Parent = BA.areyousure2
-BA.No2.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.No2.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.No2.Position = UDim2.new(0.0199999996, 0, 0.591000021, 0)
-BA.No2.Size = UDim2.new(0, 230, 0, 32)
-BA.No2.AutoButtonColor = false
-BA.No2.Font = Enum.Font.SourceSans
-BA.No2.Text = "No"
-BA.No2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.No2.TextSize = 32.000
-BA.No2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_16.CornerRadius = UDim.new(0, 5)
-BA.UICorner_16.Parent = BA.No2
-
-BA.rusure2.Name = "rusure2"
-BA.rusure2.Parent = BA.areyousure2
-BA.rusure2.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.rusure2.BackgroundTransparency = 1.000
-BA.rusure2.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.rusure2.Position = UDim2.new(0.287, 0, 0.0540000014, 0)
-BA.rusure2.Size = UDim2.new(0, 102, 0, 25)
-BA.rusure2.Font = Enum.Font.Jura
-BA.rusure2.Text = "Server Hop?"
-BA.rusure2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.rusure2.TextSize = 41.000
-
-BA.BackColor3_2.Name = "BackColor3"
-BA.BackColor3_2.Parent = BA.areyousure2
-BA.BackColor3_2.BackgroundColor3 = Color3.fromRGB(34, 38, 43)
-BA.BackColor3_2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.BackColor3_2.Position = UDim2.new(0, 0, 0.280000001, 0)
-BA.BackColor3_2.Size = UDim2.new(0, 242, 0, 126)
-BA.BackColor3_2.ZIndex = 0
-
-BA.Whatitdo3.Name = "Whatitdo3"
-BA.Whatitdo3.Parent = BA.areyousure2
-BA.Whatitdo3.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo3.BackgroundTransparency = 1.000
-BA.Whatitdo3.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo3.Position = UDim2.new(0.287497759, 0, 0.774087727, 0)
-BA.Whatitdo3.Size = UDim2.new(0, 102, 0, 25)
-BA.Whatitdo3.Font = Enum.Font.Jura
-BA.Whatitdo3.Text = "This Will Cause You To Join"
-BA.Whatitdo3.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Whatitdo3.TextSize = 15.000
-
-BA.Whatitdo4.Name = "Whatitdo4"
-BA.Whatitdo4.Parent = BA.areyousure2
-BA.Whatitdo4.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo4.BackgroundTransparency = 1.000
-BA.Whatitdo4.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Whatitdo4.Position = UDim2.new(0.287497759, 0, 0.85408771, 0)
-BA.Whatitdo4.Size = UDim2.new(0, 102, 0, 25)
-BA.Whatitdo4.Font = Enum.Font.Jura
-BA.Whatitdo4.Text = "A Different Server Of This Game"
-BA.Whatitdo4.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Whatitdo4.TextSize = 15.000
-
-BA.ExtraTitle.Name = "ExtraTitle"
-BA.ExtraTitle.Parent = BA.ExtraTab
-BA.ExtraTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.ExtraTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.ExtraTitle.Position = UDim2.new(0.0239520967, 0, 0.0288413875, 0)
-BA.ExtraTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.ExtraTitle.AutoButtonColor = false
-BA.ExtraTitle.Font = Enum.Font.SourceSans
-BA.ExtraTitle.Text = "ㅤExtra | Other Scripts"
-BA.ExtraTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ExtraTitle.TextSize = 14.000
-BA.ExtraTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ExtraTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_17.CornerRadius = UDim.new(0, 5)
-BA.UICorner_17.Parent = BA.ExtraTitle
-
-BA.Rejoin.Name = "Rejoin"
-BA.Rejoin.Parent = BA.ExtraTab
-BA.Rejoin.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Rejoin.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Rejoin.Position = UDim2.new(0.0240000002, 0, 0.746999979, 0)
-BA.Rejoin.Size = UDim2.new(0, 318, 0, 32)
-BA.Rejoin.Font = Enum.Font.SourceSans
-BA.Rejoin.Text = "ㅤRejoin"
-BA.Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Rejoin.TextSize = 14.000
-BA.Rejoin.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Rejoin.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_18.CornerRadius = UDim.new(0, 5)
-BA.UICorner_18.Parent = BA.Rejoin
-
-BA.GrabTools.Name = "GrabTools"
-BA.GrabTools.Parent = BA.ExtraTab
-BA.GrabTools.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.GrabTools.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.GrabTools.Position = UDim2.new(0.0240000002, 0, 0.627570629, 0)
-BA.GrabTools.Size = UDim2.new(0, 318, 0, 32)
-BA.GrabTools.Font = Enum.Font.SourceSans
-BA.GrabTools.Text = "ㅤGrab Tools"
-BA.GrabTools.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.GrabTools.TextSize = 14.000
-BA.GrabTools.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.GrabTools.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_19.CornerRadius = UDim.new(0, 5)
-BA.UICorner_19.Parent = BA.GrabTools
-
-BA.ServerHop.Name = "ServerHop"
-BA.ServerHop.Parent = BA.ExtraTab
-BA.ServerHop.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ServerHop.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ServerHop.Position = UDim2.new(0.0250000004, 0, 0.870000005, 0)
-BA.ServerHop.Size = UDim2.new(0, 318, 0, 32)
-BA.ServerHop.Font = Enum.Font.SourceSans
-BA.ServerHop.Text = "ㅤServer Hop"
-BA.ServerHop.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ServerHop.TextSize = 14.000
-BA.ServerHop.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ServerHop.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_20.CornerRadius = UDim.new(0, 5)
-BA.UICorner_20.Parent = BA.ServerHop
-
-BA.DamageReducer.Name = "DamageReducer"
-BA.DamageReducer.Parent = BA.ExtraTab
-BA.DamageReducer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.DamageReducer.BackgroundTransparency = 1.000
-BA.DamageReducer.Position = UDim2.new(-0.407185614, 0, -0.134016633, 0)
-BA.DamageReducer.Size = UDim2.new(0, 470, 0, 410)
-
-BA.Offrd.Name = "Offrd"
-BA.Offrd.Parent = BA.DamageReducer
-BA.Offrd.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offrd.BackgroundTransparency = 1.000
-BA.Offrd.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offrd.Position = UDim2.new(0.872340381, 0, 0.230972275, 0)
-BA.Offrd.Size = UDim2.new(0, 52, 0, 50)
-BA.Offrd.Visible = false
-BA.Offrd.Font = Enum.Font.SciFi
-BA.Offrd.Text = "OFF"
-BA.Offrd.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offrd.TextSize = 14.000
-BA.Offrd.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Onrd.Name = "Onrd"
-BA.Onrd.Parent = BA.DamageReducer
-BA.Onrd.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onrd.BackgroundTransparency = 1.000
-BA.Onrd.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onrd.Position = UDim2.new(0.872340322, 0, 0.230972245, 0)
-BA.Onrd.Size = UDim2.new(0, 52, 0, 50)
-BA.Onrd.Visible = false
-BA.Onrd.Font = Enum.Font.SciFi
-BA.Onrd.Text = "ON"
-BA.Onrd.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onrd.TextSize = 14.000
-BA.Onrd.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.ReduceDamageOff.Name = "ReduceDamageOff"
-BA.ReduceDamageOff.Parent = BA.DamageReducer
-BA.ReduceDamageOff.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ReduceDamageOff.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ReduceDamageOff.Position = UDim2.new(0.306778669, 0, 0.253258079, 0)
-BA.ReduceDamageOff.Size = UDim2.new(0, 318, 0, 32)
-BA.ReduceDamageOff.Visible = false
-BA.ReduceDamageOff.ZIndex = 0
-BA.ReduceDamageOff.Font = Enum.Font.SourceSans
-BA.ReduceDamageOff.Text = "ㅤReduce Damage"
-BA.ReduceDamageOff.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReduceDamageOff.TextSize = 14.000
-BA.ReduceDamageOff.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReduceDamageOff.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_21.CornerRadius = UDim.new(0, 5)
-BA.UICorner_21.Parent = BA.ReduceDamageOff
-
-BA.ReduceDamageOn.Name = "ReduceDamageOn"
-BA.ReduceDamageOn.Parent = BA.DamageReducer
-BA.ReduceDamageOn.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ReduceDamageOn.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ReduceDamageOn.Position = UDim2.new(0.306778669, 0, 0.253258079, 0)
-BA.ReduceDamageOn.Size = UDim2.new(0, 318, 0, 32)
-BA.ReduceDamageOn.ZIndex = 0
-BA.ReduceDamageOn.Font = Enum.Font.SourceSans
-BA.ReduceDamageOn.Text = "ㅤReduce Damage"
-BA.ReduceDamageOn.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReduceDamageOn.TextSize = 14.000
-BA.ReduceDamageOn.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReduceDamageOn.TextWrapped = true
-BA.ReduceDamageOn.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_22.CornerRadius = UDim.new(0, 5)
-BA.UICorner_22.Parent = BA.ReduceDamageOn
-
-BA.DamageReflector.Name = "DamageReflector"
-BA.DamageReflector.Parent = BA.ExtraTab
-BA.DamageReflector.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.DamageReflector.BackgroundTransparency = 1.000
-BA.DamageReflector.Position = UDim2.new(-0.407185614, 0, -0.134016633, 0)
-BA.DamageReflector.Size = UDim2.new(0, 470, 0, 410)
-
-BA.Offreflect.Name = "Offreflect"
-BA.Offreflect.Parent = BA.DamageReflector
-BA.Offreflect.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offreflect.BackgroundTransparency = 1.000
-BA.Offreflect.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offreflect.Position = UDim2.new(0.872340381, 0, 0.333411306, 0)
-BA.Offreflect.Size = UDim2.new(0, 52, 0, 50)
-BA.Offreflect.Visible = false
-BA.Offreflect.Font = Enum.Font.SciFi
-BA.Offreflect.Text = "OFF"
-BA.Offreflect.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offreflect.TextSize = 14.000
-BA.Offreflect.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Onreflect.Name = "Onreflect"
-BA.Onreflect.Parent = BA.DamageReflector
-BA.Onreflect.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onreflect.BackgroundTransparency = 1.000
-BA.Onreflect.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onreflect.Position = UDim2.new(0.872340322, 0, 0.333411276, 0)
-BA.Onreflect.Size = UDim2.new(0, 52, 0, 50)
-BA.Onreflect.Visible = false
-BA.Onreflect.Font = Enum.Font.SciFi
-BA.Onreflect.Text = "ON"
-BA.Onreflect.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onreflect.TextSize = 14.000
-BA.Onreflect.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.ReflectDamageOff.Name = "ReflectDamageOff"
-BA.ReflectDamageOff.Parent = BA.DamageReflector
-BA.ReflectDamageOff.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ReflectDamageOff.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ReflectDamageOff.Position = UDim2.new(0.307000011, 0, 0.356999993, 0)
-BA.ReflectDamageOff.Size = UDim2.new(0, 318, 0, 32)
-BA.ReflectDamageOff.Visible = false
-BA.ReflectDamageOff.ZIndex = 0
-BA.ReflectDamageOff.Font = Enum.Font.SourceSans
-BA.ReflectDamageOff.Text = "ㅤReflect Damage"
-BA.ReflectDamageOff.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReflectDamageOff.TextSize = 14.000
-BA.ReflectDamageOff.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReflectDamageOff.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_23.CornerRadius = UDim.new(0, 5)
-BA.UICorner_23.Parent = BA.ReflectDamageOff
-
-BA.ReflectDamageOn.Name = "ReflectDamageOn"
-BA.ReflectDamageOn.Parent = BA.DamageReflector
-BA.ReflectDamageOn.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ReflectDamageOn.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ReflectDamageOn.Position = UDim2.new(0.307000011, 0, 0.356999993, 0)
-BA.ReflectDamageOn.Size = UDim2.new(0, 318, 0, 32)
-BA.ReflectDamageOn.ZIndex = 0
-BA.ReflectDamageOn.Font = Enum.Font.SourceSans
-BA.ReflectDamageOn.Text = "ㅤReflect Damage"
-BA.ReflectDamageOn.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReflectDamageOn.TextSize = 14.000
-BA.ReflectDamageOn.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ReflectDamageOn.TextWrapped = true
-BA.ReflectDamageOn.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_24.CornerRadius = UDim.new(0, 5)
-BA.UICorner_24.Parent = BA.ReflectDamageOn
-
-BA.AntiTimeStopper.Name = "AntiTimeStopper"
-BA.AntiTimeStopper.Parent = BA.ExtraTab
-BA.AntiTimeStopper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.AntiTimeStopper.BackgroundTransparency = 1.000
-BA.AntiTimeStopper.Position = UDim2.new(-0.407185614, 0, -0.134016633, 0)
-BA.AntiTimeStopper.Size = UDim2.new(0, 470, 0, 410)
-
-BA.OffATS.Name = "OffATS"
-BA.OffATS.Parent = BA.AntiTimeStopper
-BA.OffATS.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.OffATS.BackgroundTransparency = 1.000
-BA.OffATS.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.OffATS.Position = UDim2.new(0.872340381, 0, 0.438289344, 0)
-BA.OffATS.Size = UDim2.new(0, 52, 0, 50)
-BA.OffATS.Visible = false
-BA.OffATS.Font = Enum.Font.SciFi
-BA.OffATS.Text = "OFF"
-BA.OffATS.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.OffATS.TextSize = 14.000
-BA.OffATS.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.OnATS.Name = "OnATS"
-BA.OnATS.Parent = BA.AntiTimeStopper
-BA.OnATS.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.OnATS.BackgroundTransparency = 1.000
-BA.OnATS.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.OnATS.Position = UDim2.new(0.872340322, 0, 0.438289315, 0)
-BA.OnATS.Size = UDim2.new(0, 52, 0, 50)
-BA.OnATS.Visible = false
-BA.OnATS.Font = Enum.Font.SciFi
-BA.OnATS.Text = "ON"
-BA.OnATS.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.OnATS.TextSize = 14.000
-BA.OnATS.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.ATSOff.Name = "ATSOff"
-BA.ATSOff.Parent = BA.AntiTimeStopper
-BA.ATSOff.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ATSOff.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ATSOff.Position = UDim2.new(0.307000011, 0, 0.460000008, 0)
-BA.ATSOff.Size = UDim2.new(0, 318, 0, 32)
-BA.ATSOff.Visible = false
-BA.ATSOff.ZIndex = 0
-BA.ATSOff.Font = Enum.Font.SourceSans
-BA.ATSOff.Text = "ㅤAnti Time Stop"
-BA.ATSOff.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ATSOff.TextSize = 14.000
-BA.ATSOff.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ATSOff.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_25.CornerRadius = UDim.new(0, 5)
-BA.UICorner_25.Parent = BA.ATSOff
-
-BA.ATSOn.Name = "ATSOn"
-BA.ATSOn.Parent = BA.AntiTimeStopper
-BA.ATSOn.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ATSOn.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ATSOn.Position = UDim2.new(0.307000011, 0, 0.460000008, 0)
-BA.ATSOn.Size = UDim2.new(0, 318, 0, 32)
-BA.ATSOn.ZIndex = 0
-BA.ATSOn.Font = Enum.Font.SourceSans
-BA.ATSOn.Text = "ㅤAnti Time Stop"
-BA.ATSOn.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ATSOn.TextSize = 14.000
-BA.ATSOn.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ATSOn.TextWrapped = true
-BA.ATSOn.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_26.CornerRadius = UDim.new(0, 5)
-BA.UICorner_26.Parent = BA.ATSOn
-
-BA.CheckWorth.Name = "CheckWorth"
-BA.CheckWorth.Parent = BA.ExtraTab
-BA.CheckWorth.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.CheckWorth.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.CheckWorth.Position = UDim2.new(0.0209999997, 0, 0.50999999, 0)
-BA.CheckWorth.Size = UDim2.new(0, 318, 0, 32)
-BA.CheckWorth.Font = Enum.Font.SourceSans
-BA.CheckWorth.Text = "ㅤCheck Worthiness"
-BA.CheckWorth.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.CheckWorth.TextSize = 14.000
-BA.CheckWorth.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.CheckWorth.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_27.CornerRadius = UDim.new(0, 5)
-BA.UICorner_27.Parent = BA.CheckWorth
-
-BA.ShopTab.Name = "ShopTab"
-BA.ShopTab.Parent = BA.XELTAB1
-BA.ShopTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.ShopTab.BackgroundTransparency = 1.000
-BA.ShopTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
-BA.ShopTab.Size = UDim2.new(0, 334, 0, 361)
-BA.ShopTab.Visible = false
-
-BA.ShopTitle.Name = "ShopTitle"
-BA.ShopTitle.Parent = BA.ShopTab
-BA.ShopTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.ShopTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.ShopTitle.Position = UDim2.new(0.0240000002, 0, 0.0289999992, 0)
-BA.ShopTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.ShopTitle.AutoButtonColor = false
-BA.ShopTitle.Font = Enum.Font.SourceSans
-BA.ShopTitle.Text = "ㅤShop | Buy"
-BA.ShopTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ShopTitle.TextSize = 14.000
-BA.ShopTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ShopTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_28.CornerRadius = UDim.new(0, 5)
-BA.UICorner_28.Parent = BA.ShopTitle
-
-BA.ChangeTrait.Name = "ChangeTrait"
-BA.ChangeTrait.Parent = BA.ShopTab
-BA.ChangeTrait.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ChangeTrait.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ChangeTrait.Position = UDim2.new(0.0239999741, 0, 0.273000032, 0)
-BA.ChangeTrait.Size = UDim2.new(0, 154, 0, 32)
-BA.ChangeTrait.AutoButtonColor = false
-BA.ChangeTrait.Font = Enum.Font.SourceSans
-BA.ChangeTrait.Text = "Change Trait"
-BA.ChangeTrait.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ChangeTrait.TextSize = 14.000
-BA.ChangeTrait.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_29.CornerRadius = UDim.new(0, 5)
-BA.UICorner_29.Parent = BA.ChangeTrait
-
-BA.Purchase1.Name = "Purchase1"
-BA.Purchase1.Parent = BA.ShopTab
-BA.Purchase1.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase1.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase1.Position = UDim2.new(0.512023926, 0, 0.153653726, 0)
-BA.Purchase1.Size = UDim2.new(0, 154, 0, 32)
-BA.Purchase1.Font = Enum.Font.SourceSans
-BA.Purchase1.Text = "Purchase: ($2500)"
-BA.Purchase1.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Purchase1.TextSize = 14.000
-BA.Purchase1.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_30.CornerRadius = UDim.new(0, 5)
-BA.UICorner_30.Parent = BA.Purchase1
-
-BA.DerosStick.Name = "DerosStick"
-BA.DerosStick.Parent = BA.ShopTab
-BA.DerosStick.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.DerosStick.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.DerosStick.Position = UDim2.new(0.0239999741, 0, 0.153999984, 0)
-BA.DerosStick.Size = UDim2.new(0, 154, 0, 32)
-BA.DerosStick.AutoButtonColor = false
-BA.DerosStick.Font = Enum.Font.SourceSans
-BA.DerosStick.Text = "Deros Stick Of Wisdom"
-BA.DerosStick.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.DerosStick.TextSize = 14.000
-BA.DerosStick.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_31.CornerRadius = UDim.new(0, 5)
-BA.UICorner_31.Parent = BA.DerosStick
-
-BA.Roka.Name = "Roka"
-BA.Roka.Parent = BA.ShopTab
-BA.Roka.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Roka.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Roka.Position = UDim2.new(0.0240000002, 0, 0.507000029, 0)
-BA.Roka.Size = UDim2.new(0, 154, 0, 32)
-BA.Roka.AutoButtonColor = false
-BA.Roka.Font = Enum.Font.SourceSans
-BA.Roka.Text = "Roka Fruit"
-BA.Roka.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Roka.TextSize = 14.000
-BA.Roka.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_32.CornerRadius = UDim.new(0, 5)
-BA.UICorner_32.Parent = BA.Roka
-
-BA.Arrow.Name = "Arrow"
-BA.Arrow.Parent = BA.ShopTab
-BA.Arrow.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Arrow.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Arrow.Position = UDim2.new(0.0240000002, 0, 0.386999995, 0)
-BA.Arrow.Size = UDim2.new(0, 154, 0, 32)
-BA.Arrow.AutoButtonColor = false
-BA.Arrow.Font = Enum.Font.SourceSans
-BA.Arrow.Text = "Stand Arrow"
-BA.Arrow.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Arrow.TextSize = 14.000
-BA.Arrow.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_33.CornerRadius = UDim.new(0, 5)
-BA.UICorner_33.Parent = BA.Arrow
-
-BA.Purchase2.Name = "Purchase2"
-BA.Purchase2.Parent = BA.ShopTab
-BA.Purchase2.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase2.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase2.Position = UDim2.new(0.512023926, 0, 0.272767305, 0)
-BA.Purchase2.Size = UDim2.new(0, 154, 0, 32)
-BA.Purchase2.Font = Enum.Font.SourceSans
-BA.Purchase2.Text = "Purchase: ($250)"
-BA.Purchase2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Purchase2.TextSize = 14.000
-BA.Purchase2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_34.CornerRadius = UDim.new(0, 5)
-BA.UICorner_34.Parent = BA.Purchase2
-
-BA.Purchase3.Name = "Purchase3"
-BA.Purchase3.Parent = BA.ShopTab
-BA.Purchase3.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase3.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase3.Position = UDim2.new(0.512023926, 0, 0.386675864, 0)
-BA.Purchase3.Size = UDim2.new(0, 154, 0, 32)
-BA.Purchase3.Font = Enum.Font.SourceSans
-BA.Purchase3.Text = "Purchase: ($175)"
-BA.Purchase3.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Purchase3.TextSize = 14.000
-BA.Purchase3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_35.CornerRadius = UDim.new(0, 5)
-BA.UICorner_35.Parent = BA.Purchase3
-
-BA.Purchase4.Name = "Purchase4"
-BA.Purchase4.Parent = BA.ShopTab
-BA.Purchase4.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase4.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase4.Position = UDim2.new(0.512023926, 0, 0.505789459, 0)
-BA.Purchase4.Size = UDim2.new(0, 154, 0, 32)
-BA.Purchase4.Font = Enum.Font.SourceSans
-BA.Purchase4.Text = "Purchase: ($100)"
-BA.Purchase4.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Purchase4.TextSize = 14.000
-BA.Purchase4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_36.CornerRadius = UDim.new(0, 5)
-BA.UICorner_36.Parent = BA.Purchase4
-
-BA.Purchase5.Name = "Purchase5"
-BA.Purchase5.Parent = BA.ShopTab
-BA.Purchase5.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase5.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Purchase5.Position = UDim2.new(0.512023926, 0, 0.62767309, 0)
-BA.Purchase5.Size = UDim2.new(0, 154, 0, 32)
-BA.Purchase5.Font = Enum.Font.SourceSans
-BA.Purchase5.Text = "Purchase: ($75)"
-BA.Purchase5.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Purchase5.TextSize = 14.000
-BA.Purchase5.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_37.CornerRadius = UDim.new(0, 5)
-BA.UICorner_37.Parent = BA.Purchase5
-
-BA.Umbrella.Name = "Umbrella"
-BA.Umbrella.Parent = BA.ShopTab
-BA.Umbrella.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Umbrella.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Umbrella.Position = UDim2.new(0.0240000002, 0, 0.626113594, 0)
-BA.Umbrella.Size = UDim2.new(0, 154, 0, 32)
-BA.Umbrella.AutoButtonColor = false
-BA.Umbrella.Font = Enum.Font.SourceSans
-BA.Umbrella.Text = "Umbrella Hat"
-BA.Umbrella.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Umbrella.TextSize = 14.000
-BA.Umbrella.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_38.CornerRadius = UDim.new(0, 5)
-BA.UICorner_38.Parent = BA.Umbrella
-
-BA.ItemsTab.Name = "ItemsTab"
-BA.ItemsTab.Parent = BA.XELTAB1
-BA.ItemsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.ItemsTab.BackgroundTransparency = 1.000
-BA.ItemsTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
-BA.ItemsTab.Size = UDim2.new(0, 334, 0, 361)
-BA.ItemsTab.Visible = false
-
-BA.ItemsTitle.Name = "ItemsTitle"
-BA.ItemsTitle.Parent = BA.ItemsTab
-BA.ItemsTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.ItemsTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.ItemsTitle.Position = UDim2.new(0.0240000002, 0, 0.0289999992, 0)
-BA.ItemsTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.ItemsTitle.AutoButtonColor = false
-BA.ItemsTitle.Font = Enum.Font.SourceSans
-BA.ItemsTitle.Text = "ㅤItems | Storage"
-BA.ItemsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ItemsTitle.TextSize = 14.000
-BA.ItemsTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.ItemsTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_39.CornerRadius = UDim.new(0, 5)
-BA.UICorner_39.Parent = BA.ItemsTitle
-
-BA.Slot1_2.Name = "Slot1"
-BA.Slot1_2.Parent = BA.ItemsTab
-BA.Slot1_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot1_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot1_2.Position = UDim2.new(0.0239520967, 0, 0.153579995, 0)
-BA.Slot1_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot1_2.Font = Enum.Font.SourceSans
-BA.Slot1_2.Text = "ㅤSlot 1"
-BA.Slot1_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot1_2.TextSize = 14.000
-BA.Slot1_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot1_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_40.CornerRadius = UDim.new(0, 5)
-BA.UICorner_40.Parent = BA.Slot1_2
-
-BA.Slot2_2.Name = "Slot2"
-BA.Slot2_2.Parent = BA.ItemsTab
-BA.Slot2_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot2_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot2_2.Position = UDim2.new(0.0239520967, 0, 0.272755355, 0)
-BA.Slot2_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot2_2.Font = Enum.Font.SourceSans
-BA.Slot2_2.Text = "ㅤSlot 2"
-BA.Slot2_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot2_2.TextSize = 14.000
-BA.Slot2_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot2_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_41.CornerRadius = UDim.new(0, 5)
-BA.UICorner_41.Parent = BA.Slot2_2
-
-BA.Slot3_2.Name = "Slot3"
-BA.Slot3_2.Parent = BA.ItemsTab
-BA.Slot3_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot3_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot3_2.Position = UDim2.new(0.0239520967, 0, 0.387337923, 0)
-BA.Slot3_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot3_2.Font = Enum.Font.SourceSans
-BA.Slot3_2.Text = "ㅤSlot 3"
-BA.Slot3_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot3_2.TextSize = 14.000
-BA.Slot3_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot3_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_42.CornerRadius = UDim.new(0, 5)
-BA.UICorner_42.Parent = BA.Slot3_2
-
-BA.Slot4_2.Name = "Slot4"
-BA.Slot4_2.Parent = BA.ItemsTab
-BA.Slot4_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot4_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot4_2.Position = UDim2.new(0.0239520967, 0, 0.506513298, 0)
-BA.Slot4_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot4_2.Font = Enum.Font.SourceSans
-BA.Slot4_2.Text = "ㅤSlot 4"
-BA.Slot4_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot4_2.TextSize = 14.000
-BA.Slot4_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot4_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_43.CornerRadius = UDim.new(0, 5)
-BA.UICorner_43.Parent = BA.Slot4_2
-
-BA.Slot5_2.Name = "Slot5"
-BA.Slot5_2.Parent = BA.ItemsTab
-BA.Slot5_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot5_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot5_2.Position = UDim2.new(0.0239520967, 0, 0.626636028, 0)
-BA.Slot5_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot5_2.Font = Enum.Font.SourceSans
-BA.Slot5_2.Text = "ㅤSlot 5"
-BA.Slot5_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot5_2.TextSize = 14.000
-BA.Slot5_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot5_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_44.CornerRadius = UDim.new(0, 5)
-BA.UICorner_44.Parent = BA.Slot5_2
-
-BA.Slot7_2.Name = "Slot7"
-BA.Slot7_2.Parent = BA.ItemsTab
-BA.Slot7_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot7_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot7_2.Position = UDim2.new(0.0209999997, 0, 0.864000022, 0)
-BA.Slot7_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot7_2.Font = Enum.Font.SourceSans
-BA.Slot7_2.Text = "ㅤSlot 7"
-BA.Slot7_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot7_2.TextSize = 14.000
-BA.Slot7_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot7_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_45.CornerRadius = UDim.new(0, 5)
-BA.UICorner_45.Parent = BA.Slot7_2
-
-BA.Slot6_2.Name = "Slot6"
-BA.Slot6_2.Parent = BA.ItemsTab
-BA.Slot6_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Slot6_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Slot6_2.Position = UDim2.new(0.0240000002, 0, 0.745999992, 0)
-BA.Slot6_2.Size = UDim2.new(0, 318, 0, 32)
-BA.Slot6_2.Font = Enum.Font.SourceSans
-BA.Slot6_2.Text = "ㅤSlot 6"
-BA.Slot6_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot6_2.TextSize = 14.000
-BA.Slot6_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Slot6_2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_46.CornerRadius = UDim.new(0, 5)
-BA.UICorner_46.Parent = BA.Slot6_2
-
-BA.HomeTab.Name = "HomeTab"
-BA.HomeTab.Parent = BA.XELTAB1
-BA.HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.HomeTab.BackgroundTransparency = 1.000
-BA.HomeTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
-BA.HomeTab.Size = UDim2.new(0, 334, 0, 361)
-BA.HomeTab.Visible = true
-
-BA.HomeTitle.Name = "HomeTitle"
-BA.HomeTitle.Parent = BA.HomeTab
-BA.HomeTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.HomeTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.HomeTitle.Position = UDim2.new(0.0240000002, 0, 0.0289999992, 0)
-BA.HomeTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.HomeTitle.AutoButtonColor = false
-BA.HomeTitle.Font = Enum.Font.SourceSans
-BA.HomeTitle.Text = "ㅤHome | Info"
-BA.HomeTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.HomeTitle.TextSize = 14.000
-BA.HomeTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.HomeTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_47.CornerRadius = UDim.new(0, 5)
-BA.UICorner_47.Parent = BA.HomeTitle
-
-BA.Version.Name = "Version"
-BA.Version.Parent = BA.HomeTab
-BA.Version.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Version.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Version.Position = UDim2.new(0.0239520967, 0, 0.153579995, 0)
-BA.Version.Size = UDim2.new(0, 318, 0, 32)
-BA.Version.AutoButtonColor = false
-BA.Version.Font = Enum.Font.SourceSans
-BA.Version.Text = "ㅤVersion: v1.0"
-BA.Version.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Version.TextSize = 14.000
-BA.Version.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Version.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_48.CornerRadius = UDim.new(0, 5)
-BA.UICorner_48.Parent = BA.Version
-
-BA.Credits.Name = "Credits"
-BA.Credits.Parent = BA.HomeTab
-BA.Credits.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Credits.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Credits.Position = UDim2.new(0.0239520967, 0, 0.272755384, 0)
-BA.Credits.Size = UDim2.new(0, 318, 0, 32)
-BA.Credits.AutoButtonColor = false
-BA.Credits.Font = Enum.Font.SourceSans
-BA.Credits.Text = "ㅤCredits: Revurxe#1447"
-BA.Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Credits.TextSize = 14.000
-BA.Credits.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Credits.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_49.CornerRadius = UDim.new(0, 5)
-BA.UICorner_49.Parent = BA.Credits
-
-BA.LastUpdated.Name = "LastUpdated"
-BA.LastUpdated.Parent = BA.HomeTab
-BA.LastUpdated.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.LastUpdated.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.LastUpdated.Position = UDim2.new(0.0239520967, 0, 0.387337983, 0)
-BA.LastUpdated.Size = UDim2.new(0, 318, 0, 32)
-BA.LastUpdated.AutoButtonColor = false
-BA.LastUpdated.Font = Enum.Font.SourceSans
-BA.LastUpdated.Text = "ㅤLast Updated: 9/10/21"
-BA.LastUpdated.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.LastUpdated.TextSize = 14.000
-BA.LastUpdated.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.LastUpdated.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_50.CornerRadius = UDim.new(0, 5)
-BA.UICorner_50.Parent = BA.LastUpdated
-
-BA.Discord.Name = "Discord"
-BA.Discord.Parent = BA.HomeTab
-BA.Discord.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Discord.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Discord.Position = UDim2.new(0.0239520967, 0, 0.506513298, 0)
-BA.Discord.Size = UDim2.new(0, 318, 0, 32)
-BA.Discord.Font = Enum.Font.SourceSans
-BA.Discord.Text = "ㅤDiscord: Click To Copy To Clipoard"
-BA.Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Discord.TextSize = 14.000
-BA.Discord.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Discord.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_51.CornerRadius = UDim.new(0, 5)
-BA.UICorner_51.Parent = BA.Discord
-
-BA.Main.Name = "Main"
-BA.Main.Parent = BA.XELTAB1
-BA.Main.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Main.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Main.Position = UDim2.new(0.00887233671, 0, 0.226619184, 0)
-BA.Main.Size = UDim2.new(0, 126, 0, 35)
-BA.Main.Font = Enum.Font.SourceSans
-BA.Main.Text = "Main"
-BA.Main.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Main.TextSize = 14.000
-BA.Main.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_52.CornerRadius = UDim.new(0, 5)
-BA.UICorner_52.Parent = BA.Main
-
-BA.ItemStorage.Name = "ItemStorage"
-BA.ItemStorage.Parent = BA.XELTAB1
-BA.ItemStorage.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.ItemStorage.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.ItemStorage.Position = UDim2.new(0.00887233671, 0, 0.642780483, 0)
-BA.ItemStorage.Size = UDim2.new(0, 126, 0, 35)
-BA.ItemStorage.Font = Enum.Font.SourceSans
-BA.ItemStorage.Text = "Item Storage"
-BA.ItemStorage.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ItemStorage.TextSize = 14.000
-BA.ItemStorage.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_53.CornerRadius = UDim.new(0, 5)
-BA.UICorner_53.Parent = BA.ItemStorage
-
-BA.MainTab.Name = "MainTab"
-BA.MainTab.Parent = BA.XELTAB1
-BA.MainTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.MainTab.BackgroundTransparency = 1.000
-BA.MainTab.Position = UDim2.new(0.289361715, 0, 0.118032761, 0)
-BA.MainTab.Size = UDim2.new(0, 334, 0, 361)
-BA.MainTab.Visible = false
-
-BA.MainTitle.Name = "MainTitle"
-BA.MainTitle.Parent = BA.MainTab
-BA.MainTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.MainTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.MainTitle.Position = UDim2.new(0.0240000002, 0, 0.0289999992, 0)
-BA.MainTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.MainTitle.AutoButtonColor = false
-BA.MainTitle.Font = Enum.Font.SourceSans
-BA.MainTitle.Text = "ㅤMain | Automatics"
-BA.MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.MainTitle.TextSize = 14.000
-BA.MainTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.MainTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_54.CornerRadius = UDim.new(0, 5)
-BA.UICorner_54.Parent = BA.MainTitle
-
-BA.AutoJ.Name = "AutoJ"
-BA.AutoJ.Parent = BA.MainTab
-BA.AutoJ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoJ.BackgroundTransparency = 1.000
-BA.AutoJ.Position = UDim2.new(-0.407000005, 0, -0.159999996, 0)
-BA.AutoJ.Size = UDim2.new(0, 470, 0, 365)
-
-BA.AutoFarmJotaro.Name = "AutoFarmJotaro"
-BA.AutoFarmJotaro.Parent = BA.AutoJ
-BA.AutoFarmJotaro.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmJotaro.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro.Position = UDim2.new(0.305999994, 0, 0.430000007, 0)
-BA.AutoFarmJotaro.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmJotaro.Font = Enum.Font.SourceSans
-BA.AutoFarmJotaro.Text = "ㅤAuto Farm: Jotaro"
-BA.AutoFarmJotaro.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro.TextSize = 14.000
-BA.AutoFarmJotaro.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_55.CornerRadius = UDim.new(0, 5)
-BA.UICorner_55.Parent = BA.AutoFarmJotaro
-
-BA.AutoFarmJotaro2.Name = "AutoFarmJotaro2"
-BA.AutoFarmJotaro2.Parent = BA.AutoJ
-BA.AutoFarmJotaro2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmJotaro2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro2.Position = UDim2.new(0.305999994, 0, 0.430000007, 0)
-BA.AutoFarmJotaro2.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmJotaro2.Visible = false
-BA.AutoFarmJotaro2.Font = Enum.Font.SourceSans
-BA.AutoFarmJotaro2.Text = "ㅤAuto Farm: Jotaro"
-BA.AutoFarmJotaro2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro2.TextSize = 14.000
-BA.AutoFarmJotaro2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_56.CornerRadius = UDim.new(0, 5)
-BA.UICorner_56.Parent = BA.AutoFarmJotaro2
-
-BA.Onj.Name = "Onj"
-BA.Onj.Parent = BA.AutoJ
-BA.Onj.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onj.BackgroundTransparency = 1.000
-BA.Onj.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onj.Position = UDim2.new(0.870212734, 0, 0.402739733, 0)
-BA.Onj.Size = UDim2.new(0, 52, 0, 50)
-BA.Onj.Visible = false
-BA.Onj.Font = Enum.Font.SciFi
-BA.Onj.Text = "ON"
-BA.Onj.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onj.TextSize = 14.000
-BA.Onj.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Offj.Name = "Offj"
-BA.Offj.Parent = BA.AutoJ
-BA.Offj.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offj.BackgroundTransparency = 1.000
-BA.Offj.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offj.Position = UDim2.new(0.870212734, 0, 0.402739733, 0)
-BA.Offj.Size = UDim2.new(0, 52, 0, 50)
-BA.Offj.Visible = false
-BA.Offj.Font = Enum.Font.SciFi
-BA.Offj.Text = "OFF"
-BA.Offj.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offj.TextSize = 14.000
-BA.Offj.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.AutoG.Name = "AutoG"
-BA.AutoG.Parent = BA.MainTab
-BA.AutoG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoG.BackgroundTransparency = 1.000
-BA.AutoG.Position = UDim2.new(-0.407000005, 0, -0.159999996, 0)
-BA.AutoG.Size = UDim2.new(0, 470, 0, 365)
-
-BA.AutoFarmTools.Name = "AutoFarmTools"
-BA.AutoFarmTools.Parent = BA.AutoG
-BA.AutoFarmTools.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmTools.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmTools.Position = UDim2.new(0.306285053, 0, 0.541339695, 0)
-BA.AutoFarmTools.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmTools.Font = Enum.Font.SourceSans
-BA.AutoFarmTools.Text = "ㅤAuto Farm: Tools"
-BA.AutoFarmTools.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmTools.TextSize = 14.000
-BA.AutoFarmTools.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmTools.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_57.CornerRadius = UDim.new(0, 5)
-BA.UICorner_57.Parent = BA.AutoFarmTools
-
-BA.AutoFarmTools2.Name = "AutoFarmTools2"
-BA.AutoFarmTools2.Parent = BA.AutoG
-BA.AutoFarmTools2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmTools2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmTools2.Position = UDim2.new(0.305999994, 0, 0.541000009, 0)
-BA.AutoFarmTools2.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmTools2.Visible = false
-BA.AutoFarmTools2.Font = Enum.Font.SourceSans
-BA.AutoFarmTools2.Text = "ㅤAuto Farm: Tools"
-BA.AutoFarmTools2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmTools2.TextSize = 14.000
-BA.AutoFarmTools2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmTools2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_58.CornerRadius = UDim.new(0, 5)
-BA.UICorner_58.Parent = BA.AutoFarmTools2
-
-BA.Ong.Name = "Ong"
-BA.Ong.Parent = BA.AutoG
-BA.Ong.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ong.BackgroundTransparency = 1.000
-BA.Ong.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ong.Position = UDim2.new(0.868085086, 0, 0.517808199, 0)
-BA.Ong.Size = UDim2.new(0, 52, 0, 50)
-BA.Ong.Visible = false
-BA.Ong.Font = Enum.Font.SciFi
-BA.Ong.Text = "ON"
-BA.Ong.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ong.TextSize = 14.000
-BA.Ong.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Offg.Name = "Offg"
-BA.Offg.Parent = BA.AutoG
-BA.Offg.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offg.BackgroundTransparency = 1.000
-BA.Offg.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offg.Position = UDim2.new(0.868085086, 0, 0.517808199, 0)
-BA.Offg.Size = UDim2.new(0, 52, 0, 50)
-BA.Offg.Visible = false
-BA.Offg.Font = Enum.Font.SciFi
-BA.Offg.Text = "OFF"
-BA.Offg.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offg.TextSize = 14.000
-BA.Offg.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.AutoC.Name = "AutoC"
-BA.AutoC.Parent = BA.MainTab
-BA.AutoC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoC.BackgroundTransparency = 1.000
-BA.AutoC.Position = UDim2.new(-0.407000005, 0, -0.159999996, 0)
-BA.AutoC.Size = UDim2.new(0, 470, 0, 365)
-
-BA.AutoFarmClick2.Name = "AutoFarmClick2"
-BA.AutoFarmClick2.Parent = BA.AutoC
-BA.AutoFarmClick2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmClick2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmClick2.Position = UDim2.new(0.305999994, 0, 0.658999979, 0)
-BA.AutoFarmClick2.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmClick2.Visible = false
-BA.AutoFarmClick2.Font = Enum.Font.SourceSans
-BA.AutoFarmClick2.Text = "ㅤAuto Clicker"
-BA.AutoFarmClick2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmClick2.TextSize = 14.000
-BA.AutoFarmClick2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmClick2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_59.CornerRadius = UDim.new(0, 5)
-BA.UICorner_59.Parent = BA.AutoFarmClick2
-
-BA.AutoFarmClick.Name = "AutoFarmClick"
-BA.AutoFarmClick.Parent = BA.AutoC
-BA.AutoFarmClick.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmClick.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmClick.Position = UDim2.new(0.306251049, 0, 0.659209132, 0)
-BA.AutoFarmClick.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmClick.Font = Enum.Font.SourceSans
-BA.AutoFarmClick.Text = "ㅤAuto Clicker"
-BA.AutoFarmClick.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmClick.TextSize = 14.000
-BA.AutoFarmClick.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmClick.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_60.CornerRadius = UDim.new(0, 5)
-BA.UICorner_60.Parent = BA.AutoFarmClick
-
-BA.Onc.Name = "Onc"
-BA.Onc.Parent = BA.AutoC
-BA.Onc.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onc.BackgroundTransparency = 1.000
-BA.Onc.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onc.Position = UDim2.new(0.870000005, 0, 0.63278079, 0)
-BA.Onc.Size = UDim2.new(0, 52, 0, 50)
-BA.Onc.Visible = false
-BA.Onc.Font = Enum.Font.SciFi
-BA.Onc.Text = "ON"
-BA.Onc.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Onc.TextSize = 14.000
-BA.Onc.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Offc.Name = "Offc"
-BA.Offc.Parent = BA.AutoC
-BA.Offc.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offc.BackgroundTransparency = 1.000
-BA.Offc.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offc.Position = UDim2.new(0.870212734, 0, 0.632876694, 0)
-BA.Offc.Size = UDim2.new(0, 52, 0, 50)
-BA.Offc.Visible = false
-BA.Offc.Font = Enum.Font.SciFi
-BA.Offc.Text = "OFF"
-BA.Offc.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offc.TextSize = 14.000
-BA.Offc.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.AutoQ.Name = "AutoQ"
-BA.AutoQ.Parent = BA.MainTab
-BA.AutoQ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoQ.BackgroundTransparency = 1.000
-BA.AutoQ.Position = UDim2.new(-0.407000005, 0, -0.159999996, 0)
-BA.AutoQ.Size = UDim2.new(0, 470, 0, 365)
-
-BA.AutoFarmJotaro4.Name = "AutoFarmJotaro4"
-BA.AutoFarmJotaro4.Parent = BA.AutoQ
-BA.AutoFarmJotaro4.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmJotaro4.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro4.Position = UDim2.new(0.305999994, 0, 0.310315073, 0)
-BA.AutoFarmJotaro4.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmJotaro4.ZIndex = 0
-BA.AutoFarmJotaro4.Font = Enum.Font.SourceSans
-BA.AutoFarmJotaro4.Text = "ㅤAuto Farm: Quest"
-BA.AutoFarmJotaro4.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro4.TextSize = 14.000
-BA.AutoFarmJotaro4.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro4.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_61.CornerRadius = UDim.new(0, 5)
-BA.UICorner_61.Parent = BA.AutoFarmJotaro4
-
-BA.AutoFarmJotaro3.Name = "AutoFarmJotaro3"
-BA.AutoFarmJotaro3.Parent = BA.AutoQ
-BA.AutoFarmJotaro3.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.AutoFarmJotaro3.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.AutoFarmJotaro3.Position = UDim2.new(0.305999994, 0, 0.310315073, 0)
-BA.AutoFarmJotaro3.Size = UDim2.new(0, 318, 0, 32)
-BA.AutoFarmJotaro3.Visible = false
-BA.AutoFarmJotaro3.Font = Enum.Font.SourceSans
-BA.AutoFarmJotaro3.Text = "ㅤAuto Farm: Quest"
-BA.AutoFarmJotaro3.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro3.TextSize = 14.000
-BA.AutoFarmJotaro3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.AutoFarmJotaro3.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_62.CornerRadius = UDim.new(0, 5)
-BA.UICorner_62.Parent = BA.AutoFarmJotaro3
-
-BA.Ons.Name = "Ons"
-BA.Ons.Parent = BA.AutoQ
-BA.Ons.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ons.BackgroundTransparency = 1.000
-BA.Ons.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ons.Position = UDim2.new(0.870000005, 0, 0.284520537, 0)
-BA.Ons.Size = UDim2.new(0, 52, 0, 50)
-BA.Ons.Visible = false
-BA.Ons.Font = Enum.Font.SciFi
-BA.Ons.Text = "ON"
-BA.Ons.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Ons.TextSize = 14.000
-BA.Ons.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Offs.Name = "Offs"
-BA.Offs.Parent = BA.AutoQ
-BA.Offs.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offs.BackgroundTransparency = 1.000
-BA.Offs.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offs.Position = UDim2.new(0.870212734, 0, 0.284931511, 0)
-BA.Offs.Size = UDim2.new(0, 52, 0, 50)
-BA.Offs.Visible = false
-BA.Offs.Font = Enum.Font.SciFi
-BA.Offs.Text = "OFF"
-BA.Offs.TextColor3 = Color3.fromRGB(50, 205, 50)
-BA.Offs.TextSize = 14.000
-BA.Offs.TextStrokeColor3 = Color3.fromRGB(50, 205, 50)
-
-BA.Exit.Name = "Exit"
-BA.Exit.Parent = BA.XELTAB1
-BA.Exit.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Exit.BackgroundTransparency = 1.000
-BA.Exit.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Exit.Position = UDim2.new(0.938297868, 0, 0.038714923, 0)
-BA.Exit.Size = UDim2.new(0, 21, 0, 14)
-BA.Exit.AutoButtonColor = false
-BA.Exit.Font = Enum.Font.Jura
-BA.Exit.Text = ">"
-BA.Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Exit.TextSize = 41.000
-BA.Exit.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Exit.Rotation = 90
-
-BA.Plus.Name = "Plus"
-BA.Plus.Parent = BA.XELTAB1
-BA.Plus.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Plus.BackgroundTransparency = 1.000
-BA.Plus.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Plus.Position = UDim2.new(0.938297868, 0, 0.038714923, 0)
-BA.Plus.Size = UDim2.new(0, 21, 0, 14)
-BA.Plus.AutoButtonColor = false
-BA.Plus.Font = Enum.Font.Jura
-BA.Plus.Text = ">"
-BA.Plus.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Plus.TextSize = 41.000
-BA.Plus.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Plus.Rotation = 270
-
-BA.BackColor1.Name = "BackColor1"
-BA.BackColor1.Parent = BA.XELTAB1
-BA.BackColor1.BackgroundColor3 = Color3.fromRGB(34, 38, 43)
-BA.BackColor1.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.BackColor1.Position = UDim2.new(0.289361715, 0, 0.121223189, 0)
-BA.BackColor1.Size = UDim2.new(0, 334, 0, 360)
-BA.BackColor1.ZIndex = 0
-
-BA.GameName.Name = "GameName"
-BA.GameName.Parent = BA.XELTAB1
-BA.GameName.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.GameName.BackgroundTransparency = 1.000
-BA.GameName.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.GameName.Position = UDim2.new(0.00800000038, 0, 0.941999972, 0)
-BA.GameName.Size = UDim2.new(0, 126, 0, 18)
-BA.GameName.Font = Enum.Font.Jura
-BA.GameName.Text = "Bizzare Adventures"
-BA.GameName.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.GameName.TextSize = 14.000
-BA.GameName.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.TeleportsTab.Name = "TeleportsTab"
-BA.TeleportsTab.Parent = BA.XELTAB1
-BA.TeleportsTab.Active = true
-BA.TeleportsTab.BackgroundColor3 = Color3.fromRGB(34, 38, 43)
-BA.TeleportsTab.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.TeleportsTab.Position = UDim2.new(0.289000034, 0, 0.121223189, 0)
-BA.TeleportsTab.Size = UDim2.new(0, 334, 0, 359)
-BA.TeleportsTab.Visible = false
-BA.TeleportsTab.ScrollBarThickness = 7
-
-BA.HiddenSpot.Name = "HiddenSpot"
-BA.HiddenSpot.Parent = BA.TeleportsTab
-BA.HiddenSpot.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.HiddenSpot.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.HiddenSpot.Position = UDim2.new(0.0240000002, 0, 0.0659999996, 0)
-BA.HiddenSpot.Size = UDim2.new(0, 311, 0, 32)
-BA.HiddenSpot.Font = Enum.Font.SourceSans
-BA.HiddenSpot.Text = "Hidden Spot"
-BA.HiddenSpot.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.HiddenSpot.TextSize = 14.000
-BA.HiddenSpot.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_63.CornerRadius = UDim.new(0, 5)
-BA.UICorner_63.Parent = BA.HiddenSpot
-
-BA.Bank.Name = "Bank"
-BA.Bank.Parent = BA.TeleportsTab
-BA.Bank.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Bank.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Bank.Position = UDim2.new(0.0240000002, 0, 0.119000003, 0)
-BA.Bank.Size = UDim2.new(0, 311, 0, 32)
-BA.Bank.Font = Enum.Font.SourceSans
-BA.Bank.Text = "Bank"
-BA.Bank.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Bank.TextSize = 14.000
-BA.Bank.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_64.CornerRadius = UDim.new(0, 5)
-BA.UICorner_64.Parent = BA.Bank
-
-BA.Pizza.Name = "Pizza"
-BA.Pizza.Parent = BA.TeleportsTab
-BA.Pizza.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Pizza.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Pizza.Position = UDim2.new(0.0240000002, 0, 0.170000002, 0)
-BA.Pizza.Size = UDim2.new(0, 311, 0, 32)
-BA.Pizza.Font = Enum.Font.SourceSans
-BA.Pizza.Text = "Pizza Place"
-BA.Pizza.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Pizza.TextSize = 14.000
-BA.Pizza.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_65.CornerRadius = UDim.new(0, 5)
-BA.UICorner_65.Parent = BA.Pizza
-
-BA.BasketballCourt.Name = "BasketballCourt"
-BA.BasketballCourt.Parent = BA.TeleportsTab
-BA.BasketballCourt.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.BasketballCourt.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.BasketballCourt.Position = UDim2.new(0.0240000002, 0, 0.222000003, 0)
-BA.BasketballCourt.Size = UDim2.new(0, 311, 0, 32)
-BA.BasketballCourt.Font = Enum.Font.SourceSans
-BA.BasketballCourt.Text = "Basketball Court"
-BA.BasketballCourt.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.BasketballCourt.TextSize = 14.000
-BA.BasketballCourt.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_66.CornerRadius = UDim.new(0, 5)
-BA.UICorner_66.Parent = BA.BasketballCourt
-
-BA.Roller.Name = "Roller"
-BA.Roller.Parent = BA.TeleportsTab
-BA.Roller.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Roller.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Roller.Position = UDim2.new(0.0240000002, 0, 0.324999988, 0)
-BA.Roller.Size = UDim2.new(0, 311, 0, 32)
-BA.Roller.Font = Enum.Font.SourceSans
-BA.Roller.Text = "Road Roller"
-BA.Roller.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Roller.TextSize = 14.000
-BA.Roller.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_67.CornerRadius = UDim.new(0, 5)
-BA.UICorner_67.Parent = BA.Roller
-
-BA.Arcade.Name = "Arcade"
-BA.Arcade.Parent = BA.TeleportsTab
-BA.Arcade.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Arcade.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Arcade.Position = UDim2.new(0.0240000002, 0, 0.275000006, 0)
-BA.Arcade.Size = UDim2.new(0, 311, 0, 32)
-BA.Arcade.Font = Enum.Font.SourceSans
-BA.Arcade.Text = "Arcade"
-BA.Arcade.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Arcade.TextSize = 14.000
-BA.Arcade.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_68.CornerRadius = UDim.new(0, 5)
-BA.UICorner_68.Parent = BA.Arcade
-
-BA.Shop_2.Name = "Shop"
-BA.Shop_2.Parent = BA.TeleportsTab
-BA.Shop_2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Shop_2.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Shop_2.Position = UDim2.new(0.0240000002, 0, 0.377000004, 0)
-BA.Shop_2.Size = UDim2.new(0, 311, 0, 32)
-BA.Shop_2.Font = Enum.Font.SourceSans
-BA.Shop_2.Text = "Shop"
-BA.Shop_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Shop_2.TextSize = 14.000
-BA.Shop_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_69.CornerRadius = UDim.new(0, 5)
-BA.UICorner_69.Parent = BA.Shop_2
-
-BA.Smith.Name = "Smith"
-BA.Smith.Parent = BA.TeleportsTab
-BA.Smith.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Smith.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Smith.Position = UDim2.new(0.0240000002, 0, 0.42899999, 0)
-BA.Smith.Size = UDim2.new(0, 311, 0, 32)
-BA.Smith.Font = Enum.Font.SourceSans
-BA.Smith.Text = "Smith"
-BA.Smith.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Smith.TextSize = 14.000
-BA.Smith.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_70.CornerRadius = UDim.new(0, 5)
-BA.UICorner_70.Parent = BA.Smith
-
-BA.Lemon.Name = "Lemon"
-BA.Lemon.Parent = BA.TeleportsTab
-BA.Lemon.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Lemon.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Lemon.Position = UDim2.new(0.0240000002, 0, 0.481999993, 0)
-BA.Lemon.Size = UDim2.new(0, 311, 0, 32)
-BA.Lemon.Font = Enum.Font.SourceSans
-BA.Lemon.Text = "Lemonade Stand"
-BA.Lemon.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Lemon.TextSize = 14.000
-BA.Lemon.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_71.CornerRadius = UDim.new(0, 5)
-BA.UICorner_71.Parent = BA.Lemon
-
-BA.Sucun.Name = "Sucun"
-BA.Sucun.Parent = BA.TeleportsTab
-BA.Sucun.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Sucun.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Sucun.Position = UDim2.new(0.0240000002, 0, 0.536658525, 0)
-BA.Sucun.Size = UDim2.new(0, 311, 0, 32)
-BA.Sucun.Font = Enum.Font.SourceSans
-BA.Sucun.Text = "Sucun"
-BA.Sucun.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Sucun.TextSize = 14.000
-BA.Sucun.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_72.CornerRadius = UDim.new(0, 5)
-BA.UICorner_72.Parent = BA.Sucun
-
-BA.Mv.Name = "Mv"
-BA.Mv.Parent = BA.TeleportsTab
-BA.Mv.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Mv.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Mv.Position = UDim2.new(0.0240000002, 0, 0.536000013, 0)
-BA.Mv.Size = UDim2.new(0, 311, 0, 32)
-BA.Mv.Font = Enum.Font.SourceSans
-BA.Mv.Text = "Mv"
-BA.Mv.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Mv.TextSize = 14.000
-BA.Mv.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_73.CornerRadius = UDim.new(0, 5)
-BA.UICorner_73.Parent = BA.Mv
-
-BA.Exeryze.Name = "Exeryze"
-BA.Exeryze.Parent = BA.TeleportsTab
-BA.Exeryze.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Exeryze.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Exeryze.Position = UDim2.new(0.0210059881, 0, 0.589097559, 0)
-BA.Exeryze.Size = UDim2.new(0, 311, 0, 32)
-BA.Exeryze.Font = Enum.Font.SourceSans
-BA.Exeryze.Text = "Exeryze"
-BA.Exeryze.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Exeryze.TextSize = 14.000
-BA.Exeryze.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_74.CornerRadius = UDim.new(0, 5)
-BA.UICorner_74.Parent = BA.Exeryze
-
-BA.Room.Name = "Room"
-BA.Room.Parent = BA.TeleportsTab
-BA.Room.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Room.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Room.Position = UDim2.new(0.0210059881, 0, 0.643975616, 0)
-BA.Room.Size = UDim2.new(0, 311, 0, 32)
-BA.Room.Font = Enum.Font.SourceSans
-BA.Room.Text = "Room"
-BA.Room.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Room.TextSize = 14.000
-BA.Room.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_75.CornerRadius = UDim.new(0, 5)
-BA.UICorner_75.Parent = BA.Room
-
-BA.ZsBridge.Name = "ZsBridge"
-BA.ZsBridge.Parent = BA.TeleportsTab
-BA.ZsBridge.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ZsBridge.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ZsBridge.Position = UDim2.new(0.0240000002, 0, 0.700073183, 0)
-BA.ZsBridge.Size = UDim2.new(0, 311, 0, 32)
-BA.ZsBridge.Font = Enum.Font.SourceSans
-BA.ZsBridge.Text = "Za Shadow Bridge"
-BA.ZsBridge.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ZsBridge.TextSize = 14.000
-BA.ZsBridge.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_76.CornerRadius = UDim.new(0, 5)
-BA.UICorner_76.Parent = BA.ZsBridge
-
-BA.Zs.Name = "Zs"
-BA.Zs.Parent = BA.TeleportsTab
-BA.Zs.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Zs.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Zs.Position = UDim2.new(0.0209999997, 0, 0.754999995, 0)
-BA.Zs.Size = UDim2.new(0, 311, 0, 32)
-BA.Zs.Font = Enum.Font.SourceSans
-BA.Zs.Text = "Za Shadow Door"
-BA.Zs.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Zs.TextSize = 14.000
-BA.Zs.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_77.CornerRadius = UDim.new(0, 5)
-BA.UICorner_77.Parent = BA.Zs
-
-BA.ZsKey.Name = "ZsKey"
-BA.ZsKey.Parent = BA.TeleportsTab
-BA.ZsKey.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.ZsKey.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.ZsKey.Position = UDim2.new(0.018011976, 0, 0.811048806, 0)
-BA.ZsKey.Size = UDim2.new(0, 311, 0, 32)
-BA.ZsKey.Font = Enum.Font.SourceSans
-BA.ZsKey.Text = "Za Shadow Room"
-BA.ZsKey.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.ZsKey.TextSize = 14.000
-BA.ZsKey.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_78.CornerRadius = UDim.new(0, 5)
-BA.UICorner_78.Parent = BA.ZsKey
-
-BA.Hidden.Name = "Hidden"
-BA.Hidden.Parent = BA.TeleportsTab
-BA.Hidden.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.Hidden.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.Hidden.Position = UDim2.new(0.0209999997, 0, 0.866999984, 0)
-BA.Hidden.Size = UDim2.new(0, 311, 0, 32)
-BA.Hidden.Font = Enum.Font.SourceSans
-BA.Hidden.Text = "Unknown"
-BA.Hidden.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Hidden.TextSize = 14.000
-BA.Hidden.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_79.CornerRadius = UDim.new(0, 5)
-BA.UICorner_79.Parent = BA.Hidden
-
-BA.TeleportsTitle.Name = "TeleportsTitle"
-BA.TeleportsTitle.Parent = BA.TeleportsTab
-BA.TeleportsTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.TeleportsTitle.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.TeleportsTitle.Position = UDim2.new(0.0240000002, 0, 0.0109999999, 0)
-BA.TeleportsTitle.Size = UDim2.new(0, 318, 0, 32)
-BA.TeleportsTitle.AutoButtonColor = false
-BA.TeleportsTitle.Font = Enum.Font.SourceSans
-BA.TeleportsTitle.Text = "ㅤTeleports | Locations"
-BA.TeleportsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.TeleportsTitle.TextSize = 14.000
-BA.TeleportsTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.TeleportsTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_80.CornerRadius = UDim.new(0, 5)
-BA.UICorner_80.Parent = BA.TeleportsTitle
-
-BA.XELTAB2.Name = "XELTAB2"
-BA.XELTAB2.Parent = BA.XELTAB1
-BA.XELTAB2.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.XELTAB2.Position = UDim2.new(1.026, 0, 2, 0)
-BA.XELTAB2.Size = UDim2.new(0, 281, 0, 410)
-BA.XELTAB2.Visible = false
-
-BA.Exit_2.Name = "Exit"
-BA.Exit_2.Parent = BA.XELTAB2
-BA.Exit_2.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.Exit_2.BackgroundTransparency = 1.000
-BA.Exit_2.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Exit_2.Position = UDim2.new(0.860077262, 0, 0.038714923, 0)
-BA.Exit_2.Size = UDim2.new(0, 21, 0, 14)
-BA.Exit_2.ZIndex = 2
-BA.Exit_2.AutoButtonColor = false
-BA.Exit_2.Font = Enum.Font.Jura
-BA.Exit_2.Text = ">"
-BA.Exit_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Exit_2.TextSize = 41.000
-BA.Exit_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.Exit_2.Rotation = 90
-
-BA.BackColor2.Name = "BackColor2"
-BA.BackColor2.Parent = BA.XELTAB2
-BA.BackColor2.Active = true
-BA.BackColor2.BackgroundColor3 = Color3.fromRGB(34, 38, 43)
-BA.BackColor2.BorderColor3 = Color3.fromRGB(30, 29, 36)
-BA.BackColor2.Position = UDim2.new(0, 0, 0.121556215, 0)
-BA.BackColor2.Size = UDim2.new(0, 281, 0, 360)
-BA.BackColor2.ZIndex = 0
-BA.BackColor2.CanvasSize = UDim2.new(0, 0, 2, 100)
-BA.BackColor2.ScrollBarThickness = 9
-
-BA.SupportedTitle.Name = "SupportedTitle"
-BA.SupportedTitle.Parent = BA.BackColor2
-BA.SupportedTitle.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.SupportedTitle.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.SupportedTitle.Position = UDim2.new(0.0369631946, 0, 0.0109314602, 0)
-BA.SupportedTitle.Size = UDim2.new(0, 251, 0, 32)
-BA.SupportedTitle.ZIndex = 4
-BA.SupportedTitle.AutoButtonColor = false
-BA.SupportedTitle.Font = Enum.Font.SourceSans
-BA.SupportedTitle.Text = "ㅤGames | Info"
-BA.SupportedTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.SupportedTitle.TextSize = 14.000
-BA.SupportedTitle.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-BA.SupportedTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.UICorner_81.CornerRadius = UDim.new(0, 5)
-BA.UICorner_81.Parent = BA.SupportedTitle
-
-BA.BizzareAdventures.Name = "Bizzare Adventures"
-BA.BizzareAdventures.Parent = BA.BackColor2
-BA.BizzareAdventures.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.BizzareAdventures.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.BizzareAdventures.Position = UDim2.new(0.0405219123, 0, 0.0577420257, 0)
-BA.BizzareAdventures.Size = UDim2.new(0, 119, 0, 32)
-BA.BizzareAdventures.AutoButtonColor = false
-BA.BizzareAdventures.Font = Enum.Font.SourceSans
-BA.BizzareAdventures.Text = "Bizzare Adventures"
-BA.BizzareAdventures.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.BizzareAdventures.TextSize = 14.000
-BA.BizzareAdventures.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_82.CornerRadius = UDim.new(0, 5)
-BA.UICorner_82.Parent = BA.BizzareAdventures
-
-BA.MythPiece.Name = "MythPiece"
-BA.MythPiece.Parent = BA.BackColor2
-BA.MythPiece.BackgroundColor3 = Color3.fromRGB(30, 29, 36)
-BA.MythPiece.BorderColor3 = Color3.fromRGB(37, 36, 43)
-BA.MythPiece.Position = UDim2.new(0.0369631946, 0, 0.106356472, 0)
-BA.MythPiece.Size = UDim2.new(0, 119, 0, 32)
-BA.MythPiece.AutoButtonColor = false
-BA.MythPiece.Font = Enum.Font.SourceSans
-BA.MythPiece.Text = "Myth Piece"
-BA.MythPiece.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.MythPiece.TextSize = 14.000
-BA.MythPiece.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_83.CornerRadius = UDim.new(0, 5)
-BA.UICorner_83.Parent = BA.MythPiece
-
-BA.GetGameLink2.Name = "GetGameLink2"
-BA.GetGameLink2.Parent = BA.BackColor2
-BA.GetGameLink2.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.GetGameLink2.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.GetGameLink2.Position = UDim2.new(0.499816716, 0, 0.104107104, 0)
-BA.GetGameLink2.Size = UDim2.new(0, 119, 0, 32)
-BA.GetGameLink2.ZIndex = 4
-BA.GetGameLink2.Font = Enum.Font.SourceSans
-BA.GetGameLink2.Text = "(Coming Soon)"
-BA.GetGameLink2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.GetGameLink2.TextSize = 14.000
-BA.GetGameLink2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_84.CornerRadius = UDim.new(0, 5)
-BA.UICorner_84.Parent = BA.GetGameLink2
-
-BA.GetGameLink1.Name = "GetGameLink1"
-BA.GetGameLink1.Parent = BA.BackColor2
-BA.GetGameLink1.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.GetGameLink1.BorderColor3 = Color3.fromRGB(50, 205, 50)
-BA.GetGameLink1.Position = UDim2.new(0.500157952, 0, 0.0586893298, 0)
-BA.GetGameLink1.Size = UDim2.new(0, 119, 0, 32)
-BA.GetGameLink1.ZIndex = 4
-BA.GetGameLink1.Font = Enum.Font.SourceSans
-BA.GetGameLink1.Text = "Get Game Link"
-BA.GetGameLink1.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.GetGameLink1.TextSize = 14.000
-BA.GetGameLink1.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_85.CornerRadius = UDim.new(0, 5)
-BA.UICorner_85.Parent = BA.GetGameLink1
-
-BA.XelHubTitle2.Name = "XelHubTitle2"
-BA.XelHubTitle2.Parent = BA.XELTAB2
-BA.XelHubTitle2.BackgroundColor3 = Color3.fromRGB(29, 31, 32)
-BA.XelHubTitle2.BackgroundTransparency = 1.000
-BA.XelHubTitle2.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.XelHubTitle2.Position = UDim2.new(0.07318151, 0, 0.0246502124, 0)
-BA.XelHubTitle2.Size = UDim2.new(0, 102, 0, 25)
-BA.XelHubTitle2.Font = Enum.Font.Jura
-BA.XelHubTitle2.Text = "Supported Games"
-BA.XelHubTitle2.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.XelHubTitle2.TextSize = 26.000
-BA.XelHubTitle2.TextXAlignment = Enum.TextXAlignment.Left
-
-BA.Teleports.Name = "Teleports"
-BA.Teleports.Parent = BA.XELTAB1
-BA.Teleports.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.Teleports.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.Teleports.Position = UDim2.new(0.00887233671, 0, 0.749024391, 0)
-BA.Teleports.Size = UDim2.new(0, 126, 0, 32)
-BA.Teleports.Font = Enum.Font.SourceSans
-BA.Teleports.Text = "Teleports"
-BA.Teleports.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.Teleports.TextSize = 14.000
-BA.Teleports.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_86.CornerRadius = UDim.new(0, 5)
-BA.UICorner_86.Parent = BA.Teleports
-
-BA.SupportedGames.Name = "SupportedGames"
-BA.SupportedGames.Parent = BA.XELTAB1
-BA.SupportedGames.BackgroundColor3 = Color3.fromRGB(50, 205, 50)
-BA.SupportedGames.BorderColor3 = Color3.fromRGB(29, 31, 32)
-BA.SupportedGames.Position = UDim2.new(0.00887233671, 0, 0.849024415, 0)
-BA.SupportedGames.Size = UDim2.new(0, 126, 0, 32)
-BA.SupportedGames.Font = Enum.Font.SourceSans
-BA.SupportedGames.Text = "Supported Games"
-BA.SupportedGames.TextColor3 = Color3.fromRGB(255, 255, 255)
-BA.SupportedGames.TextSize = 14.000
-BA.SupportedGames.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-
-BA.UICorner_87.CornerRadius = UDim.new(0, 5)
-BA.UICorner_87.Parent = BA.SupportedGames
-
-BA.Shop.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = true
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = false
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jujutsoo/dDdasaS/main/README.md"))()
+local Window = Library.CreateLib("Xel Hub", "Serpent")
+
+local Home = Window:NewTab("Home")
+local Main = Window:NewTab("Main")
+local LocalPlayer = Window:NewTab("LocalPlayer")
+local PlayerScripts = Window:NewTab("Players")
+local Teleports = Window:NewTab("Teleports")
+local Storage = Window:NewTab("Storage")
+local Shop = Window:NewTab("Shop")
+local SupportedGames = Window:NewTab("Supported Games")
+local MainSection = Main:NewSection("Main | Scripts")
+local HomeSection = Home:NewSection("Home | Info")
+local LocalPlayerSection = LocalPlayer:NewSection("LocalPlayer | Scripts")
+local ShopSection = Shop:NewSection("Shop | Buy")
+local StorageSection = Storage:NewSection("Storage | Menus")
+local TeleportsSection = Teleports:NewSection("Teleports | Locations")
+local PlayerScriptsSection = PlayerScripts:NewSection("Players | Scripts")
+local SupportedGamesSection = SupportedGames:NewSection("Games | Supported")
+
+------- Home Tab
+
+HomeSection:NewButton("Version: v2.0", "Version Number", function()
+    -- script
 end)
 
-BA.Extra.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = true
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = false
+HomeSection:NewButton("Credits: Revurxe#1447 and DJZOMBIE#2748", "Creators Discord", function()
+    -- script
 end)
 
-BA.Home.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = true
-	BA.TeleportsTab.Visible = false
+HomeSection:NewButton("Recently Updated On: 9/14/21", "Date Of Most Recent Changes", function()
+    -- script
 end)
 
-BA.ItemStorage.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = true
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = false
+HomeSection:NewButton("Discord Server", "Click To Copy Link To Clipboard", function()
+    setclipboard("https://discord.gg/Hbq3TgAJbB")
 end)
 
-BA.Main.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = true
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = false
+HomeSection:NewKeybind("Hide / Show GUI", "Customize The Close Gui Button", Enum.KeyCode.RightAlt, function()
+	Library:ToggleUI()
 end)
 
-BA.Stands.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = true
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = false
-end)
+------- Main Tab
 
-BA.SupportedGames.MouseButton1Down:connect(function()
-	BA.XELTAB2.Visible = true
-	BA.areyousure2.Visivle = true
-	BA.areyousure.Visivle = true
-end)
-
-BA.Teleports.MouseButton1Down:connect(function()
-	BA.MainTab.Visible = false
-	BA.ExtraTab.Visible = false
-	BA.StandsTab.Visible = false
-	BA.ShopTab.Visible = false
-	BA.ItemsTab.Visible = false
-	BA.HomeTab.Visible = false
-	BA.TeleportsTab.Visible = true
-end)
-
-
-BA.Yes.MouseButton1Down:connect(function()
-	local ts = game:GetService("TeleportService")
-
-	local p = game:GetService("Players").LocalPlayer
-
-
-
-	ts:Teleport(game.PlaceId, p)
-end)
-
-BA.Yes2.MouseButton1Down:connect(function()
-	game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
-end)
-
-
-BA.GrabTools.MouseButton1Down:connect(function()
-	char = game:GetService('Players').LocalPlayer.Character
-	game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
-		char = body end)
-	for i,v in pairs(workspace:GetDescendants()) do
-		if v:IsA('Tool') then
-			wait(1)
-			char.Humanoid:EquipTool(v) end end
-	workspace.DescendantAdded:connect(function(item)
-		pcall(function()
-			if item:IsA('Tool') then wait() char.Humanoid:EquipTool(g) end end) end)
-end)
-
-BA.Rejoin.MouseButton1Down:connect(function()
-	BA.areyousure.Visible = true
-	BA.areyousure2.Visible = true
-	BA.XELTAB2.Visible = true
-end)
-
-BA.ServerHop.MouseButton1Down:connect(function()
-	BA.areyousure2.Visible = true
-	BA.areyousure.Visible = true
-	BA.XELTAB2.Visible = true
-end)
-
-BA.ItemsTab.Slot1.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("1")
-end)
-
-BA.ItemsTab.Slot2.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("2")
-end)
-
-BA.ItemsTab.Slot3.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("3")
-end)
-
-BA.ItemsTab.Slot4.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("4")
-end)
-
-BA.ItemsTab.Slot5.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("5")
-end)
-
-BA.ItemsTab.Slot6.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("6")
-end)
-
-BA.ItemsTab.Slot7.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("7")
-end)
-
-BA.StandsTab.Slot1.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("1")
-end)
-
-BA.StandsTab.Slot2.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("2")
-end)
-
-BA.StandsTab.Slot3.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("3")
-end)
-
-BA.StandsTab.Slot4.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("4")
-end)
-
-BA.StandsTab.Slot5.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("5")
-end)
-
-BA.StandsTab.Slot6.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("6")
-end)
-
-BA.StandsTab.Slot7.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.StandBank:FireServer("7")
-end)
-
-BA.ShopTab.Purchase2.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.ChangeTrait:FireServer()
-end)
-
-BA.ShopTab.Purchase4.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.Buy:FireServer("Rokakaka Fruit")
-end)
-
-BA.ShopTab.Purchase3.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.Buy:FireServer("Arrow")
-end)
-
-BA.AutoFarmClick.MouseButton1Down:connect(function()
-	BA.Onc.Visible = true
-	BA.Offc.Visible = false
-	BA.AutoFarmClick.Visible = false
-	BA.AutoFarmClick2.Visible = true
-end)
-
-BA.AutoFarmClick.MouseButton1Down:connect(function()
-	getgenv().clickerr = true;
-
-	while wait() do
-		if getgenv().clickerr == true then
-			local VirtualUser=game:service'VirtualUser'
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton1(Vector2.new(999,999))
-		end
-	end
-end)
-
-BA.AutoFarmClick2.MouseButton1Down:connect(function()
-	BA.Onc.Visible = false
-	BA.Offc.Visible = true
-	BA.AutoFarmClick.Visible = true
-	BA.AutoFarmClick2.Visible = false
-end)
-
-BA.AutoFarmClick2.MouseButton1Down:connect(function()
-	getgenv().clickerr = false;
-
-	while wait() do
-		if getgenv().clickerr == true then
-			local VirtualUser=game:service'VirtualUser'
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton1(Vector2.new(999,999))
-		end
-	end
-end)
-
-BA.AutoFarmTools.MouseButton1Down:connect(function()
-	BA.Ong.Visible = true
-	BA.Offg.Visible = false
-	BA.AutoFarmTools.Visible = false
-	BA.AutoFarmTools2.Visible = true
-end)
-
-BA.AutoFarmTools.MouseButton1Down:connect(function()
-	getgenv().autotools = true;
-
-	while wait(1) do
-		if getgenv().autotools == true then
-			char = game:GetService('Players').LocalPlayer.Character
-			game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
-				char = body end)
-			for i,v in pairs(workspace:GetDescendants()) do
-				if v:IsA('Tool') then
-					wait(1)
-					char.Humanoid:EquipTool(v) end end
-			workspace.DescendantAdded:connect(function(item)
-				pcall(function()
-					if item:IsA('Tooxl') then wait() char.Humanoid:EquipTool(g) end end) end)
-		end
-	end
-end)
-
-BA.AutoFarmTools2.MouseButton1Down:connect(function()
-	BA.Ong.Visible = false
-	BA.Offg.Visible = true
-	BA.AutoFarmTools.Visible = true
-	BA.AutoFarmTools2.Visible = false
-end)
-
-BA.AutoFarmTools2.MouseButton1Down:connect(function()
-	getgenv().autotools = false;
-
-	while wait(1) do
-		if getgenv().autotools == true then
-			char = game:GetService('Players').LocalPlayer.Character
-			game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
-				char = body end)
-			for i,v in pairs(workspace:GetDescendants()) do
-				if v:IsA('Tool') then
-					wait(1)
-					char.Humanoid:EquipTool(v) end end
-			workspace.DescendantAdded:connect(function(item)
-				pcall(function()
-					if item:IsA('Tool') then wait() char.Humanoid:EquipTool(g) end end) end)
-		end
-	end
-end)
-
-BA.AutoFarmJotaro.MouseButton1Down:connect(function()
-	BA.Onj.Visible = true
-	BA.Offj.Visible = false
-	BA.AutoFarmJotaro.Visible = false
-	BA.AutoFarmJotaro2.Visible = true
-end)
-
-BA.AutoFarmJotaro.MouseButton1Down:connect(function()
-	getgenv().jotaro = true;
-
-	while wait() do
-		if getgenv().jotaro == true then
-			game.ReplicatedStorage.Main.Remotes.Jotaro:FireServer()
-		end
-	end
-end)
-
-BA.AutoFarmJotaro2.MouseButton1Down:connect(function()
-	BA.Onj.Visible = false
-	BA.Offj.Visible = true
-	BA.AutoFarmJotaro.Visible = true
-	BA.AutoFarmJotaro2.Visible = false
-end)
-
-BA.AutoFarmJotaro2.MouseButton1Down:connect(function()
-	getgenv().jotaro = false;
-
-	while wait() do
-		if getgenv().jotaro == true then
-			game.ReplicatedStorage.Main.Remotes.Jotaro:FireServer()
-		end
-	end
-end)
-
-BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on quest
-	BA.Ons.Visible = true
-	BA.Offs.Visible = false
-	BA.AutoFarmJotaro4.Visible = false
-	BA.AutoFarmJotaro3.Visible = true
-end)
-
-BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
-	getgenv().quest = true;
+MainSection:NewToggle("Auto Farm Quest", "Automatically Complete Quest", function(state)
+    if state then
+        getgenv().quest = true;
 	while wait() do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
@@ -2479,28 +58,8 @@ BA.AutoFarmJotaro4.MouseButton1Down:connect(function() -- on script
 			wait(3)
 		end
 	end
-end)
-
-BA.AutoFarmJotaro4.MouseButton1Down:connect(function()
-	getgenv().pp = true;
-
-	while wait(1) do
-		if getgenv().pp == true then
-			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
-		end
-	end
-end)
-
-BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off quest
-	BA.Ons.Visible = false
-	BA.Offs.Visible = true
-	BA.AutoFarmJotaro4.Visible = true
-	BA.AutoFarmJotaro3.Visible = false
-end)
-
-BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
-	getgenv().quest = false;
-
+    else
+        getgenv().quest = false;
 	while wait() do
 		if getgenv().quest == true then
 			game.ReplicatedStorage.Main.Shop.Quest:FireServer("Letter", false)
@@ -2514,345 +73,84 @@ BA.AutoFarmJotaro3.MouseButton1Down:connect(function() -- off script
 			wait(3)
 		end
 	end
+    end
 end)
 
-BA.AutoFarmJotaro3.MouseButton1Down:connect(function()
-	getgenv().pp = false;
+MainSection:NewToggle("Auto Farm Jotaro", "Automatically Talks To Jotaro When He Spawns", function(state)
+    if state then
+        getgenv().jotaro = true;
 
-	while wait(1) do
-		if getgenv().pp == true then
-			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
+	while wait() do
+		if getgenv().jotaro == true then
+			game.ReplicatedStorage.Main.Remotes.Jotaro:FireServer()
 		end
 	end
+    else
+     getgenv().jotaro = false;
+
+	while wait() do
+		if getgenv().jotaro == true then
+			game.ReplicatedStorage.Main.Remotes.Jotaro:FireServer()
+		end
+	end
+    end
 end)
 
+MainSection:NewToggle("Auto Clicker", "Automatically Clicks The Screen", function(state)
+    if state then
+        getgenv().clickerr = true;
 
-BA.HiddenSpot.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12393, 72.074859619141, -1229)
+	while wait() do
+		if getgenv().clickerr == true then
+			local VirtualUser=game:service'VirtualUser'
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton1(Vector2.new(999,999))
+		end
+	end
+    else
+        getgenv().clickerr = false;
+
+	while wait() do
+		if getgenv().clickerr == true then
+			local VirtualUser=game:service'VirtualUser'
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton1(Vector2.new(999,999))
+		end
+	end
+    end
 end)
 
-BA.Hidden.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12414.147460938, 7.4687910079956, -1192.2591552734)
+------- LocalPlayer Tab
+LocalPlayerSection:NewSlider("Walk Speed", "Changes The Walk Speed Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-BA.Arcade.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(542.89520263672, 129.81785583496, 476.57949829102)
+LocalPlayerSection:NewSlider("Jump Power", "Changes The Jump Power Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-BA.Bank.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(418.04983520508, 129.82186889648, 231.68635559082)
-end)
-
-BA.BasketballCourt.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(599.02734375, 130.04434204102, 112.71473693848)
-end)
-
-BA.Exeryze.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(220.01193237305, 129.75007629395, 114.95343780518)
-end)
-
-BA.Lemon.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(293.48294067383, 129.7682800293, 231.81153869629)
-end)
-
-BA.Mv.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469.90368652344, 135.75001525879, 244.51625061035)
-end)
-
-BA.Pizza.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(139.96214294434, 129.81785583496, 120.82416534424)
-end)
-
-BA.Roller.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160.70252990723, 129.95957946777, 595.23968505859)
-end)
-
-BA.Room.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-355.56744384766, 120.16439819336, 151.76679992676)
-end)
-
-BA.TeleportsTab.Shop.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(149.89657592773, 129.81785583496, 424.90698242188)
-end)
-
-BA.Smith.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(383.96862792969, 130.17216491699, 148.56356811523)
-end)
-
-BA.Sucun.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(549.01318359375, 129.81785583496, 24.397275924683)
-end)
-
-BA.Zs.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13394.653320313, 1.2298043966293, -1696.0211181641)
-end)
-
-BA.ZsBridge.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691.02319335938, 130.13243103027, 590.38421630859)
-end)
-
-BA.ZsKey.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12412.810546875, 7.5850982666016, -1114.0423583984)
-end)
-
-BA.Discord.MouseButton1Down:connect(function()
-	setclipboard("https://discord.gg/Hbq3TgAJbB")
-end)
-
-BA.GetGameLink1.MouseButton1Down:connect(function()
-	setclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
-end)
-
-local X1 = BA.XELTAB1
-local X = BA.XELTAB1.Exit
-
-X.MouseButton1Click:connect(function()
-
-	X1:TweenPosition(
-		UDim2.new(-0, 0, 0.94, 0), -- End Position
-		"Out", -- Easing Direction
-		"Quint", -- Easing Style
-		1, -- Time In Seconds
-		false, -- Override Other Tweens
-		nil
-	)
-end)
-
-local io = BA.XELTAB2
-local oi = BA.XELTAB1.SupportedGames
-
-oi.MouseButton1Click:connect(function()
-
-	io:TweenPosition(
-		UDim2.new(1.026, 0, 0, 0), -- End Position
-		"Out", -- Easing Direction
-		"Quint", -- Easing Style
-		1, -- Time In Seconds
-		false, -- Override Other Tweens
-		nil
-	)
-end)
-
-local vb = BA.XELTAB2
-local bv = BA.XELTAB2.Exit
-
-bv.MouseButton1Click:connect(function()
-
-	vb:TweenPosition(
-		UDim2.new(1.026, 0, 2, 0), -- End Position
-		"Out", -- Easing Direction
-		"Quint", -- Easing Style
-		1.4, -- Time In Seconds
-		false, -- Override Other Tweens
-		nil
-	)
-end)
-
-local X2 = BA.XELTAB1
-
-X2:TweenPosition(
-	UDim2.new(-0, 0, 0.148, 0), -- End Position
-	"Out", -- Easing Direction
-	"Quint", -- Easing Style
-	1, -- Time In Seconds
-	false, -- Override Other Tweens
-	nil
-)
-
-
-local X1 = BA.XELTAB1
-local X = BA.XELTAB1.Plus
-
-X.MouseButton1Click:connect(function()
-
-
-	X1:TweenPosition(
-		UDim2.new(-0, 0, 0.148, 0), -- End Position
-		"Out", -- Easing Direction
-		"Quint", -- Easing Style
-		1, -- Time In Seconds
-		false, -- Override Other Tweens
-		nil
-	)
-end)
-
-BA.Exit.MouseButton1Down:connect(function() -- 
-	BA.Exit.TextTransparency = 0.1
-	wait(.01)
-	BA.Exit.TextTransparency = 0.2
-	wait(.01)
-	BA.Exit.TextTransparency = 0.3
-	wait(.01)
-	BA.Exit.TextTransparency = 0.4
-	wait(.01)
-	BA.Exit.TextTransparency = 0.5
-	wait(.01)
-	BA.Exit.TextTransparency = 0.6
-	wait(.01)
-	BA.Exit.TextTransparency = 0.7
-	wait(.01)
-	BA.Exit.TextTransparency = 0.8
-	wait(.01)
-	BA.Exit.TextTransparency = 0.9
-	wait(.01)
-	BA.Exit.TextTransparency = 1
-	BA.Exit.Visible = false
-	BA.Plus.TextTransparency = 1
-	BA.Plus.Visible = true
-	BA.Plus.TextTransparency = 0.9
-	wait(.01)
-	BA.Plus.TextTransparency = 0.8
-	wait(.01)
-	BA.Plus.TextTransparency = 0.7
-	wait(.01)
-	BA.Plus.TextTransparency = 0.6
-	wait(.01)
-	BA.Plus.TextTransparency = 0.5
-	wait(.01)
-	BA.Plus.TextTransparency = 0.4
-	wait(.01)
-	BA.Plus.TextTransparency = 0.3
-	wait(.01)
-	BA.Plus.TextTransparency = 0.2
-	wait(.01)
-	BA.Plus.TextTransparency = 0.1
-	wait(.01)
-end)
-
-BA.Exit.MouseButton1Down:connect(function() -- 
-	BA.XelHubTitle.TextTransparency = 0.1
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.2
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.3
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.4
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.5
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.6
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.7
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.8
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.9
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 1
-	BA.XelHubTitle.Visible = false
-end)
-
-BA.Plus.MouseButton1Down:connect(function() 
-	wait(.2)
-	BA.XelHubTitle.Visible = true
-	BA.XelHubTitle.TextTransparency = 0.9
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.8
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.7
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.6
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.5
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.4
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.3
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.2
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0.1
-	wait(.01)
-	BA.XelHubTitle.TextTransparency = 0
-end)
-
-BA.Plus.MouseButton1Down:connect(function()
-	BA.Plus.TextTransparency = 0.1
-	wait(.01)
-	BA.Plus.TextTransparency = 0.2
-	wait(.01)
-	BA.Plus.TextTransparency = 0.3
-	wait(.01)
-	BA.Plus.TextTransparency = 0.4
-	wait(.01)
-	BA.Plus.TextTransparency = 0.5
-	wait(.01)
-	BA.Plus.TextTransparency = 0.6
-	wait(.01)
-	BA.Plus.TextTransparency = 0.7
-	wait(.01)
-	BA.Plus.TextTransparency = 0.8
-	wait(.01)
-	BA.Plus.TextTransparency = 0.9
-	wait(.01)
-	BA.Plus.TextTransparency = 1
-	BA.Plus.Visible = false
-	BA.Exit.TextTransparency = 1
-	BA.Exit.Visible = true
-	BA.Exit.TextTransparency = 0.9
-	wait(.01)
-	BA.Exit.TextTransparency = 0.8
-	wait(.01)
-	BA.Exit.TextTransparency = 0.7
-	wait(.01)
-	BA.Exit.TextTransparency = 0.6
-	wait(.01)
-	BA.Exit.TextTransparency = 0.5
-	wait(.01)
-	BA.Exit.TextTransparency = 0.4
-	wait(.01)
-	BA.Exit.TextTransparency = 0.3
-	wait(.01)
-	BA.Exit.TextTransparency = 0.2
-	wait(.01)
-	BA.Exit.TextTransparency = 0.1
-	wait(.01)
-end)
-
-BA.Plus.Visible = false
-
-BA.ReduceDamageOn.MouseButton1Down:connect(function()
-	BA.Onrd.Visible = true
-	BA.Offrd.Visible = false
-	BA.ReduceDamageOn.Visible = false
-	BA.ReduceDamageOff.Visible = true
-end)
-
-BA.ReduceDamageOn.MouseButton1Down:connect(function()
-	getgenv().Reduce = true;
+LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks", function(state)
+    if state then
+        getgenv().Reduce = true;
 	while wait() do
 		if getgenv().Reduce == true then
 			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
 		end
 	end
-end)
-
-BA.ReduceDamageOff.MouseButton1Down:connect(function()
-	BA.Onrd.Visible = false
-	BA.Offrd.Visible = true
-	BA.ReduceDamageOn.Visible = true
-	BA.ReduceDamageOff.Visible = false
-end)
-
-BA.ReduceDamageOff.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
-	getgenv().Reduce = false;
+    else
+        getgenv().Reduce = false;
+    game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
 	while wait() do
 		if getgenv().Reduce == true then
 			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
 		end
 	end
+    end
 end)
 
-BA.ReflectDamageOn.MouseButton1Down:connect(function()
-	BA.Onreflect.Visible = true
-	BA.Offreflect.Visible = false
-	BA.ReflectDamageOn.Visible = false
-	BA.ReflectDamageOff.Visible = true
-end)
-
-BA.ReflectDamageOn.MouseButton1Down:connect(function() 	
-	getgenv().Reflect = true;
+LocalPlayerSection:NewToggle("Reflect Damage", "Reflects Damage Back At The Enemy", function(state)
+    if state then
+       getgenv().Reflect = true;
 
 	while wait() do
 		if getgenv().Reflect == true then
@@ -2861,86 +159,49 @@ BA.ReflectDamageOn.MouseButton1Down:connect(function()
 			game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
 		end
 	end
-end)
+    else
+        game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
+			game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
+       getgenv().Reflect = false;
 
-BA.ReflectDamageOff.MouseButton1Down:connect(function()
-	BA.Onreflect.Visible = false
-	BA.Offreflect.Visible = true
-	BA.ReflectDamageOn.Visible = true
-	BA.ReflectDamageOff.Visible = false 
-end)
-
-BA.ReflectDamageOff.MouseButton1Down:connect(function()
-	getgenv().Reflect = false;
-	game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
-
-	game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
 	while wait() do
 		if getgenv().Reflect == true then
 			game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
-
 			game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
 		end
 	end
+    end
 end)
 
-BA.ATSOn.MouseButton1Down:connect(function()
-	BA.OnATS.Visible = true
-	BA.OffATS.Visible = false
-	BA.ATSOn.Visible = false
-	BA.ATSOff.Visible = true
-end)
-
-BA.ATSOn.MouseButton1Down:connect(function()
-	getgenv().ATS = true;
+LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
+    if state then
+        getgenv().ATS = true;
 	while wait() do
 		if getgenv().ATS == true then
 			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
 		end
 	end
-end)
-
-BA.ATSOff.MouseButton1Down:connect(function()
-	BA.OnATS.Visible = false
-	BA.OffATS.Visible = true
-	BA.ATSOn.Visible = true
-	BA.ATSOff.Visible = false
-end)
-
-BA.ATSOff.MouseButton1Down:connect(function()
-	getgenv().ATS = false;
-	game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
+    else
+        game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
+       getgenv().ATS = false;
 	while wait() do
 		if getgenv().ATS == true then
 			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
 		end
 	end
+    end
 end)
 
-BA.Purchase5.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.Buy:FireServer("UnberrelaHat")
+LocalPlayerSection:NewToggle("Fly", "Makes You Fly When Enabled", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
 end)
 
-BA.Purchase1.MouseButton1Down:connect(function()
-	game.ReplicatedStorage.Main.Shop.Buy:FireServer("Requiem Arrow")
-end)
-
-BA.Rejoin.MouseButton1Down:connect(function()
-	local ts = game:GetService("TeleportService")
-
-	local p = game:GetService("Players").LocalPlayer
-
-
-
-	ts:Teleport(game.PlaceId, p)
-end)
-
-BA.ServerHop.MouseButton1Down:connect(function()
-	game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
-end)
-
-BA.CheckWorth.MouseButton1Down:connect(function()
-	local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+LocalPlayerSection:NewButton("Check Worthiness", "When Activated You Will See How Worthy You Are", function()
+    local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
 	game.Workspace.NPCs["Worthiness Crab"].Transparency = 1
 
@@ -2962,18 +223,288 @@ BA.CheckWorth.MouseButton1Down:connect(function()
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
 
---anti afk
+LocalPlayerSection:NewButton("Item Notifier", "You Will Be Notified When Items Spawn", function()
+   game.Players.LocalPlayer.UserId = (490404077)
+end)
+
+LocalPlayerSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In the Workspace", function()
+    char = game:GetService('Players').LocalPlayer.Character
+	game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
+		char = body end)
+	for i,v in pairs(workspace:GetDescendants()) do
+		if v:IsA('Tool') then
+			char.Humanoid:EquipTool(v) end end
+	workspace.DescendantAdded:connect(function(item)
+		pcall(function()
+			if item:IsA('Tool') then wait() char.Humanoid:EquipTool(g) end end) end)
+end)
+
+LocalPlayerSection:NewButton("Rejoin", "Rejoins The Current Server", function()
+    local ts = game:GetService("TeleportService")
+
+	local p = game:GetService("Players").LocalPlayer
+
+
+
+	ts:Teleport(game.PlaceId, p)
+end)
+
+LocalPlayerSection:NewButton("Server Hop", "Joins A Different Server Of This Game", function()
+    game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
+end)
+
+------- Shop Tab
+
+ShopSection:NewButton("Deros Stick Of Wisdom ($2500)", "Purchases This Item", function()
+    game.ReplicatedStorage.Main.Shop.Buy:FireServer("Requiem Arrow")
+end)
+
+ShopSection:NewButton("Change Trait ($250)", "Purchases This Item", function()
+    game.ReplicatedStorage.Main.Shop.ChangeTrait:FireServer()
+end)
+
+ShopSection:NewButton("Stand Arrow ($175)", "Purchases This Item", function()
+    game.ReplicatedStorage.Main.Shop.Buy:FireServer("Arrow")
+end)
+
+ShopSection:NewButton("Roka Fruit ($100)", "Purchases This Item", function()
+    game.ReplicatedStorage.Main.Shop.Buy:FireServer("Rokakaka Fruit")
+end)
+
+ShopSection:NewButton("Umbrella Hat ($75)", "Purchases This Item", function()
+    game.ReplicatedStorage.Main.Shop.Buy:FireServer("UnberrelaHat")
+end)
+
+------- Storage Tab
+
+StorageSection:NewDropdown("Stand Slots", "Shows A List Of Stand Slots", {"Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5"}, function(currentOption)
+    print(currentOption)
+end)
+
+StorageSection:NewDropdown("Item Slots", "Shows A List Of Item Slots", {"Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5"}, function(currentOption)
+    print(currentOption)
+end)
+
+------- Teleports Tab
+
+TeleportsSection:NewButton("Arcade", "Teleports You To The Arcade", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(555.67938232422, 130.17219543457, 476.22146606445)
+end)
+
+TeleportsSection:NewButton("Bank", "Teleports You To The Bank", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(428.26251220703, 130.17219543457, 231.4549407959)
+end)
+
+TeleportsSection:NewButton("Court", "Teleports You To The Basketball Court", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(597.40679931641, 130.02571105957, 112.36196136475)
+end)
+
+TeleportsSection:NewButton("Fountain", "Teleports You To The Water Fountain", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(206.07012939453, 139.76713562012, 231.18975830078)
+end)
+
+TeleportsSection:NewButton("Gym", "Teleports You To The Gym", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.62573242188, 129.81785583496, -32.10417175293)
+end)
+
+TeleportsSection:NewButton("Hidden", "Teleports You To A Hidden Place", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12393, 72.074859619141, -1229)
+end)
+
+TeleportsSection:NewButton("Lemonade Stand", "Teleports You To The Lemonade Stand", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(293.41873168945, 129.7682800293, 229.03495788574)
+end)
+
+TeleportsSection:NewButton("Road Roller", "Teleports You To The Road Roller", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(158.00006103516, 129.81785583496, 593)
+end)
+
+TeleportsSection:NewButton("Room", "Teleports You To The Room", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-356.01699829102, 120.16439819336, 151.88427734375)
+end)
+
+TeleportsSection:NewButton("Shop", "Teleports You To The Shop", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(174.37754821777, 129.99000549316, 425.55130004883)
+end)
+
+TeleportsSection:NewButton("Smith", "Teleports You To The Smith", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(383.54336547852, 129.75007629395, 144.38616943359)
+end)
+
+TeleportsSection:NewButton("Za Shadow", "Teleports You To The Za Shadow Room", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13397.2109375, 1.2298040390015, -1664.3782958984)
+end)
+
+TeleportsSection:NewButton("Za Shadow 2", "Teleports You To The Za Shadow Room 2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12414.540039063, 8.081524848938, -1071.2841796875)
+end)
+
+TeleportsSection:NewLabel("NPCs")
+
+------- NPCs
+
+TeleportsSection:NewButton("Anvil", "Teleports You To The Anvil NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(389.97677612305, 129.80003356934, 117.89534759521)
+end)
+
+TeleportsSection:NewButton("Apholius", "Teleports You To Apholius", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(133.46823120117, 130.17219543457, 480.39682006836)
+end)
+
+TeleportsSection:NewButton("Boxer Trainer", "Teleports You To Boxer Trainer", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(166.05313110352, 129.91893005371, 592.69793701172)
+end)
+
+TeleportsSection:NewButton("Big Hoss", "Teleports You To Big Hoss", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(383.44409179688, 170.77297973633, 437.41967773438)
+end)
+
+TeleportsSection:NewButton("Change Trait", "Teleports You To Trait Changer", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184.75520324707, 129.99000549316, 433.75405883789)
+end)
+
+TeleportsSection:NewButton("Doge", "Teleports You To Doge", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(74.667625427246, 130.02505493164, 123.75333404541)
+end)
+
+TeleportsSection:NewButton("DeroZK", "Teleports You To DeroZK", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184.65548706055, 129.99000549316, 416.65939331055)
+end)
+
+TeleportsSection:NewButton("Exeryze", "Teleports You To Exeryze", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(220.00003051758, 129.75007629395, 110.99999237061)
+end)
+
+TeleportsSection:NewButton("Extra Slots NPC", "Teleports You To The Extra Slots NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(620.11865234375, 129.99772644043, 155.38487243652)
+end)
+
+TeleportsSection:NewButton("Stand Storage", "Teleports You To The Stand Changer NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(472.80322265625, 135.75001525879, 224.37843322754)
+end)
+
+TeleportsSection:NewButton("Giorno", "Teleports You To Giorno", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(330.48791503906, 129.75007629395, 4.2657694816589)
+end)
+
+TeleportsSection:NewButton("Item Storage", "Teleports You To The Item Storage NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(474.51672363281, 135.75001525879, 238.3549041748)
+end)
+
+TeleportsSection:NewButton("Wheel Spin NPC", "Teleports You To The Weel Spin NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(587.60290527344, 144.8049621582, 475.51873779297)
+end)
+
+TeleportsSection:NewButton("MV", "Teleports You To MV", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(467.83578491211, 135.75001525879, 245.43374633789)
+end)
+
+TeleportsSection:NewButton("Sucun", "Teleports You To Sucun", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(564.95654296875, 129.75007629395, 23.755081176758)
+end)
+
+TeleportsSection:NewButton("Trading NPC", "Teleports You To The Trading NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(593.03100585938, 129.82179260254, 497.42169189453)
+end)
+
+
+TeleportsSection:NewButton("Unknown", "Teleports You To The Unknown NPC", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(55.761306762695, 129.81785583496, 551.81011962891)
+end)
+
+TeleportsSection:NewButton("Vampire Man", "Teleports You To Vampire Man", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.7461454868317, 129.75007629395, -75.327278137207)
+end)
+
+TeleportsSection:NewButton("Walter 2", "Teleports You To Walter 2", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(292.94256591797, 129.7682800293, 227.03828430176)
+end)
+
+TeleportsSection:NewButton("Zeppeli", "Teleports You To Zeppeli", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.1955871582, 129.7682800293, 336.73721313477)
+end)
+
+TeleportsSection:NewButton("bKehwAcVzl", "Teleports You To bKehwAcVzl", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12413.338867188, 7.4687871932983, -1198.6892089844)
+end)
+
+
+
+------- Player Scripts Tab
+
+local BH;
+
+PlayerScriptsSection:NewTextBox("Players Name", "Type Player Name and Press Enter To Run Scripts On Them", function(txt)
+	BH = txt;
+end)
+
+PlayerScriptsSection:NewToggle("Loop Knock Player", "Loop Knocks The Players Name Entered", function(state)
+    if state then
+        getgenv().dd = true;
+	while wait() do
+		if getgenv().dd == true then
+			game.ReplicatedStorage.Main.Remotes.Knock:FireServer(Workspace[BH].Humanoid)
+		end
+	end
+    else
+        getgenv().dd = false;
+	while wait() do
+		if getgenv().dd == true then
+			game.ReplicatedStorage.Main.Remotes.Knock:FireServer(Workspace[BH].Humanoid)
+		end
+	end
+end
+end)
+
+PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name Entered", function(state)
+    if state then
+        getgenv().kill = true;
+	while wait() do
+		if getgenv().kill == true then
+		    local ooooooof = BH
+            local plr1 = game.Players.LocalPlayer.Character
+            local plr2 = game.Workspace:FindFirstChild(ooooooof)
+			plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(2,0,0)
+			
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
+		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
+		end
+	end
+    else
+        getgenv().kill = false;
+	while wait() do
+		if getgenv().kill == true then
+			print("1")
+		end
+	end
+end
+end)
+
+------- Supported Games Tab
+
+SupportedGamesSection:NewButton("Bizzare Adventures", "Click To Copy The Game Link To Your Clipboard", function()
+    SupportedGamesSection:NewButton("Bizzare Adventures", "Click To Copy Game Link To Clipboard", function()
+    setclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
+end)
+
+
+--auto equip big money
+getgenv().pp = true;
+
+	while wait(1) do
+		if getgenv().pp == true then
+			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
+		end
+	end
+--auto equip big money
+
+--antiafk
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 	wait(1)
 	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
---anti afk
-
-BA.ResetOnSpawn = false
-BA.XELTAB1.Active = true
-BA.XELTAB1.Draggable = false
-BA.XELTAB2.ZIndex = 1
-BA.XELTAB1.ZIndex = 5
-BA.XELTAB2.Visible = true
+end)
+--antiafk
