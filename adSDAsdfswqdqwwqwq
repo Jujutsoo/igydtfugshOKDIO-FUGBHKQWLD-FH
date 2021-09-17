@@ -3,41 +3,39 @@ local Window = Library.CreateLib("Xel Hub", "Serpent")
 
 local Home = Window:NewTab("Home")
 local Main = Window:NewTab("Main")
-local LocalPlayer = Window:NewTab("LocalPlayer")
+local Shop = Window:NewTab("Shop")
 local PlayerScripts = Window:NewTab("Players")
+local LocalPlayer = Window:NewTab("LocalPlayer")
 local Teleports = Window:NewTab("Teleports")
 local Storage = Window:NewTab("Storage")
-local Shop = Window:NewTab("Shop")
+local Settings = Window:NewTab("Settings")
 local SupportedGames = Window:NewTab("Supported Games")
 local MainSection = Main:NewSection("Main | Scripts")
 local HomeSection = Home:NewSection("Home | Info")
 local LocalPlayerSection = LocalPlayer:NewSection("LocalPlayer | Scripts")
 local ShopSection = Shop:NewSection("Shop | Buy")
 local StorageSection = Storage:NewSection("Storage | Menus")
+local SettingsSection = Settings:NewSection("Settings | GUI")
 local TeleportsSection = Teleports:NewSection("Teleports | Locations")
 local PlayerScriptsSection = PlayerScripts:NewSection("Players | Scripts")
 local SupportedGamesSection = SupportedGames:NewSection("Games | Supported")
 
 ------- Home Tab
 
-HomeSection:NewButton("Version: v2.0", "Version Number", function()
-    -- script
-end)
-
-HomeSection:NewButton("Credits: Revurxe#1447 and DJZOMBIE#2748", "Creators Discord", function()
-    -- script
-end)
-
-HomeSection:NewButton("Recently Updated On: 9/14/21", "Date Of Most Recent Changes", function()
-    -- script
-end)
-
 HomeSection:NewButton("Discord Server", "Click To Copy Link To Clipboard", function()
     setclipboard("https://discord.gg/Hbq3TgAJbB")
 end)
 
-HomeSection:NewKeybind("Hide / Show GUI", "Customize The Close Gui Button", Enum.KeyCode.RightAlt, function()
-	Library:ToggleUI()
+HomeSection:NewButton("Version: v2.0", "Version Number", function()
+    -- script
+end)
+
+HomeSection:NewButton("Recently Updated: 9/16/21", "Date Of Most Recent Changes", function()
+    -- script
+end)
+
+HomeSection:NewButton("Credits: XEL#3935 and DJZOMBIE#2748", "Creators Discord", function()
+    -- script
 end)
 
 ------- Main Tab
@@ -129,6 +127,46 @@ LocalPlayerSection:NewSlider("Jump Power", "Changes The Jump Power Value", 500, 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+LocalPlayerSection:NewToggle("Auto Dodge", "Automatically Dodges Attacks", function(state)
+    if state then
+       getgenv().autod = true;
+
+	while wait() do
+		if getgenv().autod == true then
+			game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		end
+	end
+    else
+        game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+       getgenv().autod = false;
+
+	while wait() do
+		if getgenv().autod == true then
+			--
+		end
+	end
+    end
+end)
+
+LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
+    if state then
+        getgenv().ATS = true;
+	while wait() do
+		if getgenv().ATS == true then
+			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
+		end
+	end
+    else
+        game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
+       getgenv().ATS = false;
+	while wait() do
+		if getgenv().ATS == true then
+			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
+		end
+	end
+    end
+end)
+
 LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks", function(state)
     if state then
         getgenv().Reduce = true;
@@ -173,33 +211,6 @@ LocalPlayerSection:NewToggle("Reflect Damage", "Reflects Damage Back At The Enem
     end
 end)
 
-LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
-    if state then
-        getgenv().ATS = true;
-	while wait() do
-		if getgenv().ATS == true then
-			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
-		end
-	end
-    else
-        game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
-       getgenv().ATS = false;
-	while wait() do
-		if getgenv().ATS == true then
-			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
-		end
-	end
-    end
-end)
-
-LocalPlayerSection:NewToggle("Fly", "Makes You Fly When Enabled", function(state)
-    if state then
-        print("Toggle On")
-    else
-        print("Toggle Off")
-    end
-end)
-
 LocalPlayerSection:NewButton("Check Worthiness", "When Activated You Will See How Worthy You Are", function()
     local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
@@ -223,10 +234,6 @@ LocalPlayerSection:NewButton("Check Worthiness", "When Activated You Will See Ho
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
 
-LocalPlayerSection:NewButton("Item Notifier", "You Will Be Notified When Items Spawn", function()
-   game.Players.LocalPlayer.UserId = (490404077)
-end)
-
 LocalPlayerSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In the Workspace", function()
     char = game:GetService('Players').LocalPlayer.Character
 	game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
@@ -237,6 +244,11 @@ LocalPlayerSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In t
 	workspace.DescendantAdded:connect(function(item)
 		pcall(function()
 			if item:IsA('Tool') then wait() char.Humanoid:EquipTool(g) end end) end)
+end)
+
+LocalPlayerSection:NewButton("Item Notifier", "You Will Be Notified When Items Spawn", function()
+   game.Players.LocalPlayer.UserId = (490404077)
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
 LocalPlayerSection:NewButton("Rejoin", "Rejoins The Current Server", function()
@@ -255,34 +267,86 @@ end)
 
 ------- Shop Tab
 
-ShopSection:NewButton("Deros Stick Of Wisdom ($2500)", "Purchases This Item", function()
+ShopSection:NewButton("Deros Stick Of Wisdom                     ($2500)", "This Is A One Part Of 3 For A Requiem Arrow", function()
     game.ReplicatedStorage.Main.Shop.Buy:FireServer("Requiem Arrow")
 end)
 
-ShopSection:NewButton("Change Trait ($250)", "Purchases This Item", function()
+ShopSection:NewButton("Change Trait                                         ($250)", "This Changes Your Stands Rarity", function()
     game.ReplicatedStorage.Main.Shop.ChangeTrait:FireServer()
 end)
 
-ShopSection:NewButton("Stand Arrow ($175)", "Purchases This Item", function()
+ShopSection:NewButton("Stand Arrow                                           ($175)", "This Will Grant You A Stand", function()
     game.ReplicatedStorage.Main.Shop.Buy:FireServer("Arrow")
 end)
 
-ShopSection:NewButton("Roka Fruit ($100)", "Purchases This Item", function()
+ShopSection:NewButton("Roka Fruit                                             ($100)", "This Will Remove Your Stand Whenever You Eat It", function()
     game.ReplicatedStorage.Main.Shop.Buy:FireServer("Rokakaka Fruit")
 end)
 
-ShopSection:NewButton("Umbrella Hat ($75)", "Purchases This Item", function()
+ShopSection:NewButton("Umbrella Hat                                           ($75)", "This Will Protect You From Sun Light Damage", function()
     game.ReplicatedStorage.Main.Shop.Buy:FireServer("UnberrelaHat")
 end)
 
 ------- Storage Tab
 
-StorageSection:NewDropdown("Stand Slots", "Shows A List Of Stand Slots", {"Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5"}, function(currentOption)
-    print(currentOption)
+StorageSection:NewButton("Stand Slot 1", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("1")
 end)
 
-StorageSection:NewDropdown("Item Slots", "Shows A List Of Item Slots", {"Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5"}, function(currentOption)
-    print(currentOption)
+StorageSection:NewButton("Stand Slot 2", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("2")
+end)
+
+StorageSection:NewButton("Stand Slot 3", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("3")
+end)
+
+StorageSection:NewButton("Stand Slot 4", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("4")
+end)
+
+StorageSection:NewButton("Stand Slot 5", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("5")
+end)
+
+StorageSection:NewButton("Stand Slot 6", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("6")
+end)
+
+StorageSection:NewButton("Stand Slot 7", "This Will Equip The Stand In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.StandBank:FireServer("7")
+end)
+
+TeleportsSection:NewLabel("Items")
+
+------- NPCs
+
+StorageSection:NewButton("Item Slot 1", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("1")
+end)
+
+StorageSection:NewButton("Item Slot 2", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("2")
+end)
+
+StorageSection:NewButton("Item Slot 3", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("3")
+end)
+
+StorageSection:NewButton("Item Slot 4", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("4")
+end)
+
+StorageSection:NewButton("Item Slot 5", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("5")
+end)
+
+StorageSection:NewButton("Item Slot 6", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("6")
+end)
+
+StorageSection:NewButton("Item Slot 7", "This Will Equip The Item In This Slot", function()
+    game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("7")
 end)
 
 ------- Teleports Tab
@@ -424,11 +488,9 @@ TeleportsSection:NewButton("Zeppeli", "Teleports You To Zeppeli", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(212.1955871582, 129.7682800293, 336.73721313477)
 end)
 
-TeleportsSection:NewButton("bKehwAcVzl", "Teleports You To bKehwAcVzl", function()
+TeleportsSection:NewButton("?bKehwAcVzl", "Teleports You To ?bKehwAcVzl", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12413.338867188, 7.4687871932983, -1198.6892089844)
 end)
-
-
 
 ------- Player Scripts Tab
 
@@ -466,16 +528,39 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
             local plr2 = game.Workspace:FindFirstChild(ooooooof)
 			plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(2,0,0)
 			
+			game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
+			game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
+			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		end
 	end
     else
         getgenv().kill = false;
-	while wait() do
+        game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
+		game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
+		game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
+	    while wait() do
 		if getgenv().kill == true then
-			print("1")
+			--
 		end
 	end
 end
@@ -484,12 +569,17 @@ end)
 ------- Supported Games Tab
 
 SupportedGamesSection:NewButton("Bizzare Adventures", "Click To Copy The Game Link To Your Clipboard", function()
-    SupportedGamesSection:NewButton("Bizzare Adventures", "Click To Copy Game Link To Clipboard", function()
     setclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
+    toclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
 end)
 
+------- Settings Tab
 
---auto equip big money
+SettingsSection:NewKeybind("Hide / Show GUI", "Customize The Close Gui Button", Enum.KeyCode.RightAlt, function()
+	Library:ToggleUI()
+end)
+
+-- Auto equip big money
 getgenv().pp = true;
 
 	while wait(1) do
@@ -497,14 +587,13 @@ getgenv().pp = true;
 			loadstring(game:HttpGet("https://pastebin.com/raw/sG7PnY9s"))()
 		end
 	end
---auto equip big money
+-- Auto equip big money
 
---antiafk
+-- Anti Afk
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 	wait(1)
 	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
-end)
---antiafk
+-- Anti Afk
