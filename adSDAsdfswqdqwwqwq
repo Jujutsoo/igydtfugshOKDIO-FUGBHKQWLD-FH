@@ -403,7 +403,7 @@ TeleportsSection:NewButton("Za Shadow 2", "Teleports You To The Za Shadow Room 2
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12414.540039063, 8.081524848938, -1071.2841796875)
 end)
 
-TeleportsSection:NewLabel("NPCs")
+StorageSection:NewLabel("NPCs")
 
 ------- NPCs
 
