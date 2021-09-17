@@ -14,7 +14,7 @@ local MainSection = Main:NewSection("Main | Scripts")
 local HomeSection = Home:NewSection("Home | Info")
 local LocalPlayerSection = LocalPlayer:NewSection("LocalPlayer | Scripts")
 local ShopSection = Shop:NewSection("Shop | Buy")
-local StorageSection = Storage:NewSection("Storage | Menus")
+local StorageSection = Storage:NewSection("Storage | Slots")
 local SettingsSection = Settings:NewSection("Settings | GUI")
 local TeleportsSection = Teleports:NewSection("Teleports | Locations")
 local PlayerScriptsSection = PlayerScripts:NewSection("Players | Scripts")
@@ -289,63 +289,63 @@ end)
 
 ------- Storage Tab
 
-StorageSection:NewButton("Stand Slot 1", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 1", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("1")
 end)
 
-StorageSection:NewButton("Stand Slot 2", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 2", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("2")
 end)
 
-StorageSection:NewButton("Stand Slot 3", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 3", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("3")
 end)
 
-StorageSection:NewButton("Stand Slot 4", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 4", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("4")
 end)
 
-StorageSection:NewButton("Stand Slot 5", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 5", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("5")
 end)
 
-StorageSection:NewButton("Stand Slot 6", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 6", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("6")
 end)
 
-StorageSection:NewButton("Stand Slot 7", "This Will Equip The Stand In This Slot", function()
+StorageSection:NewButton("Stand Slot 7", "This Will Equip / Storage The Stand In This Slot", function()
     game.ReplicatedStorage.Main.Shop.StandBank:FireServer("7")
 end)
 
-TeleportsSection:NewLabel("Items")
+StorageSection:NewLabel("Items")
 
 ------- NPCs
 
-StorageSection:NewButton("Item Slot 1", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 1", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("1")
 end)
 
-StorageSection:NewButton("Item Slot 2", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 2", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("2")
 end)
 
-StorageSection:NewButton("Item Slot 3", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 3", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("3")
 end)
 
-StorageSection:NewButton("Item Slot 4", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 4", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("4")
 end)
 
-StorageSection:NewButton("Item Slot 5", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 5", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("5")
 end)
 
-StorageSection:NewButton("Item Slot 6", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 6", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("6")
 end)
 
-StorageSection:NewButton("Item Slot 7", "This Will Equip The Item In This Slot", function()
+StorageSection:NewButton("Item Slot 7", "This Will Equip / Storage The Item In This Slot", function()
     game.ReplicatedStorage.Main.Shop.ItemBank:FireServer("7")
 end)
 
@@ -403,7 +403,7 @@ TeleportsSection:NewButton("Za Shadow 2", "Teleports You To The Za Shadow Room 2
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12414.540039063, 8.081524848938, -1071.2841796875)
 end)
 
-StorageSection:NewLabel("NPCs")
+TeleportsSection:NewLabel("NPCs")
 
 ------- NPCs
 
