@@ -177,10 +177,10 @@ LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks
 	end
     else
         getgenv().Reduce = false;
-    game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
+    game.ReplicatedStorage.Main.Attacks.Block:FireServer(false)
 	while wait() do
 		if getgenv().Reduce == true then
-			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
+			game.ReplicatedStorage.Main.Attacks.Block:FireServer(true)
 		end
 	end
     end
