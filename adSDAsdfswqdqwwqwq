@@ -167,6 +167,24 @@ LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In T
     end
 end)
 
+LocalPlayerSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", function(state)
+    if state then
+        getgenv().Knockrr = true;
+	while wait() do
+		if getgenv().Knockrr == true then
+			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
+		end
+	end
+    else
+       getgenv().Knockrr = false;
+	while wait() do
+		if getgenv().Knockrr == true then
+			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
+		end
+	end
+    end
+end)
+
 LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks", function(state)
     if state then
         getgenv().Reduce = true;
