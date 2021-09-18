@@ -148,6 +148,24 @@ LocalPlayerSection:NewToggle("Auto Dodge", "Automatically Dodges Attacks", funct
     end
 end)
 
+LocalPlayerSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", function(state)
+    if state then
+        getgenv().Knockrr = true;
+	while wait() do
+		if getgenv().Knockrr == true then
+			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
+		end
+	end
+    else
+       getgenv().Knockrr = false;
+	while wait() do
+		if getgenv().Knockrr == true then
+			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
+		end
+	end
+    end
+end)
+
 LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
     if state then
         getgenv().ATS = true;
@@ -162,24 +180,6 @@ LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In T
 	while wait() do
 		if getgenv().ATS == true then
 			game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
-		end
-	end
-    end
-end)
-
-LocalPlayerSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", function(state)
-    if state then
-        getgenv().Knockrr = true;
-	while wait() do
-		if getgenv().Knockrr == true then
-			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
-		end
-	end
-    else
-       getgenv().Knockrr = false;
-	while wait() do
-		if getgenv().Knockrr == true then
-			game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
 		end
 	end
     end
