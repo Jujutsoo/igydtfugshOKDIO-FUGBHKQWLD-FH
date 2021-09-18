@@ -523,14 +523,15 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
         getgenv().kill = true;
 	while wait() do
 		if getgenv().kill == true then
+		    
 		    local ooooooof = BH
-            local plr1 = game.Players.LocalPlayer.Character
-            local plr2 = game.Workspace:FindFirstChild(ooooooof)
-			plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(2,0,0)
+                    local plr1 = game.Players.LocalPlayer.Character
+                    local plr2 = game.Workspace:FindFirstChild(ooooooof)
+		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 			
-			game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
-			game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
-			game.ReplicatedStorage.Main.Attacks.Block:FireServer("true")
+		    game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
+		    game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
+		    game.ReplicatedStorage.Main.Attacks.Block:FireServer(true)
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
 		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
@@ -556,8 +557,8 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
     else
         getgenv().kill = false;
         game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
-		game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
-		game.ReplicatedStorage.Main.Attacks.Block:FireServer("false")
+	game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
+	game.ReplicatedStorage.Main.Attacks.Block:FireServer(false)
 	    while wait() do
 		if getgenv().kill == true then
 			--
