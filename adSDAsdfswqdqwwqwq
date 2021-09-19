@@ -175,7 +175,6 @@ LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In T
 		end
 	end
     else
-        game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
        getgenv().ATS = false;
 	while wait() do
 		if getgenv().ATS == true then
@@ -542,10 +541,11 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
 	while wait() do
 		if getgenv().kill == true then
 		    
+		    local ohString1 = "Standless"
 		    local ooooooof = BH
-                    local plr1 = game.Players.LocalPlayer.Character
-                    local plr2 = game.Players[BH].Character
-		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,2)
+            local plr1 = game.Players.LocalPlayer.Character
+            local plr2 = game.Players[BH].Character
+		    plr1.HumanoidRootPart.CFrame = plr2.Torso.CFrame * CFrame.new(0,0,1)
 		
 		    game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
 		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
@@ -553,6 +553,7 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
 		    game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
 		    game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
 		    game.ReplicatedStorage.Main.Attacks.Block:FireServer(true)
+            game:GetService("ReplicatedStorage").Main.Attacks.Heavy:FireServer(ohString1)
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
 		end
@@ -562,7 +563,6 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
         game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
 	game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
 	game.ReplicatedStorage.Main.Attacks.Block:FireServer(false)
-	game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
 	    while wait() do
 		if getgenv().kill == true then
 			--
