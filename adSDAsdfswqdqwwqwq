@@ -545,7 +545,7 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
 		    local ooooooof = BH
                     local plr1 = game.Players.LocalPlayer.Character
                     local plr2 = game.Players[BH].Character
-		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,0,4)
+		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,2)
 		
 		    game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
 		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
