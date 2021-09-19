@@ -545,31 +545,16 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
 		    local ooooooof = BH
                     local plr1 = game.Players.LocalPlayer.Character
                     local plr2 = game.Players[BH].Character
-		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
-			
+		    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,0,4)
+		
+		    game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(false)
+		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
+		    game.ReplicatedStorage.Main.Remotes.GetUp:FireServer()
 		    game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(true)
 		    game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(true)
 		    game.ReplicatedStorage.Main.Attacks.Block:FireServer(true)
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Left", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Punch:FireServer("Right", "Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
-		    game.ReplicatedStorage.Main.Attacks.Heavy:FireServer("Standless")
-		    game.ReplicatedStorage.Main.Remotes.Dodge:FireServer()
 		end
 	end
     else
@@ -577,6 +562,7 @@ PlayerScriptsSection:NewToggle("Loop Kill Player", "Loop Kills The Players Name 
         game.ReplicatedStorage.Moves["Return To Zero"].RTZ:FireServer(false)
 	game.ReplicatedStorage.Moves["Gold Experience"].Deflect:FireServer(false)
 	game.ReplicatedStorage.Main.Attacks.Block:FireServer(false)
+	game.ReplicatedStorage.Main.Remotes.Anchor:FireServer(true)
 	    while wait() do
 		if getgenv().kill == true then
 			--
