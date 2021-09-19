@@ -521,14 +521,14 @@ end)
 PlayerScriptsSection:NewToggle("Loop Knock Player", "Loop Knocks The Players Name Entered", function(state)
     if state then
         getgenv().dd = true;
-	while wait(1) do
+	while wait(.5) do
 		if getgenv().dd == true then
 			game.ReplicatedStorage.Main.Remotes.Knock:FireServer(Workspace[BH].Humanoid)
 		end
 	end
     else
         getgenv().dd = false;
-	while wait(1) do
+	while wait(.5) do
 		if getgenv().dd == true then
 			game.ReplicatedStorage.Main.Remotes.Knock:FireServer(Workspace[BH].Humanoid)
 		end
