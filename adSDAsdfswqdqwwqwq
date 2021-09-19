@@ -34,7 +34,7 @@ HomeSection:NewButton("Recently Updated: 9/16/21", "Date Of Most Recent Changes"
     -- script
 end)
 
-HomeSection:NewButton("Credits: XEL#3935 and DJZOMBIE#2748", "Creators Discord", function()
+HomeSection:NewButton("Credits: XelHub#3935 and DJZOMBIE#2748", "Creators Discord", function()
     -- script
 end)
 
