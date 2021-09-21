@@ -1,24 +1,27 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jujutsoo/dDdasaS/main/README.md"))()
 local Window = Library.CreateLib("Xel Hub", "Serpent")
-
+--- Windows
 local Home = Window:NewTab("Home")
 local Main = Window:NewTab("Main")
 local Shop = Window:NewTab("Shop")
+local Mods = Window:NewTab("Mods")
+local Local = Window:NewTab("Local")
 local PlayerScripts = Window:NewTab("Players")
-local LocalPlayer = Window:NewTab("LocalPlayer")
-local Teleports = Window:NewTab("Teleports")
 local Storage = Window:NewTab("Storage")
-local Settings = Window:NewTab("Settings")
-local SupportedGames = Window:NewTab("Supported Games")
+local Teleports = Window:NewTab("Teleports")
+local UISettings = Window:NewTab("UI Settings")
+local Supported = Window:NewTab("Supported")
+--- Sections
 local MainSection = Main:NewSection("Main | Scripts")
 local HomeSection = Home:NewSection("Home | Info")
-local LocalPlayerSection = LocalPlayer:NewSection("LocalPlayer | Scripts")
+local LocalSection = Local:NewSection("Local | Scripts")
 local ShopSection = Shop:NewSection("Shop | Buy")
+local ModsSection = Mods:NewSection("Stand | Mods")
 local StorageSection = Storage:NewSection("Storage | Slots")
-local SettingsSection = Settings:NewSection("Settings | GUI")
+local UISettingsSection = UISettings:NewSection("UI | Settings")
 local TeleportsSection = Teleports:NewSection("Teleports | Locations")
 local PlayerScriptsSection = PlayerScripts:NewSection("Players | Scripts")
-local SupportedGamesSection = SupportedGames:NewSection("Games | Supported")
+local SupportedSection = Supported:NewSection("Supported | Games")
 
 ------- Home Tab
 
@@ -26,11 +29,11 @@ HomeSection:NewButton("Discord Server", "Click To Copy Link To Clipboard", funct
     setclipboard("https://discord.gg/Hbq3TgAJbB")
 end)
 
-HomeSection:NewButton("Version: v2.0", "Version Number", function()
+HomeSection:NewButton("Version: v4.0", "Version Number", function()
     -- script
 end)
 
-HomeSection:NewButton("Recently Updated: 9/16/21", "Date Of Most Recent Changes", function()
+HomeSection:NewButton("Recently Updated: 9/21/21", "Date Of Most Recent Changes", function()
     -- script
 end)
 
@@ -93,6 +96,26 @@ MainSection:NewToggle("Auto Farm Jotaro", "Automatically Talks To Jotaro When He
     end
 end)
 
+MainSection:NewToggle("Auto Farm Dio (Coming Soon)", "Automatically Talks Kills Dio When He Spanws", function(state)
+    if state then
+        getgenv().killdio = true;
+
+	while wait() do
+		if getgenv().killdio == true then
+			--
+		end
+	end
+    else
+     getgenv().killdio = false;
+
+	while wait() do
+		if getgenv().killdio == true then
+			--
+		end
+	end
+    end
+end)
+
 MainSection:NewToggle("Auto Clicker", "Automatically Clicks The Screen", function(state)
     if state then
         getgenv().clickerr = true;
@@ -118,15 +141,15 @@ MainSection:NewToggle("Auto Clicker", "Automatically Clicks The Screen", functio
 end)
 
 ------- LocalPlayer Tab
-LocalPlayerSection:NewSlider("Walk Speed", "Changes The Walk Speed Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+LocalSection:NewSlider("Walk Speed", "Changes The Walk Speed Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-LocalPlayerSection:NewSlider("Jump Power", "Changes The Jump Power Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+LocalSection:NewSlider("Jump Power", "Changes The Jump Power Value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-LocalPlayerSection:NewToggle("Auto Dodge", "Automatically Dodges Attacks", function(state)
+LocalSection:NewToggle("Auto Dodge", "Automatically Dodges Attacks", function(state)
     if state then
        getgenv().autod = true;
 
@@ -147,7 +170,7 @@ LocalPlayerSection:NewToggle("Auto Dodge", "Automatically Dodges Attacks", funct
     end
 end)
 
-LocalPlayerSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", function(state)
+LocalSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", function(state)
     if state then
         getgenv().Knockrr = true;
 	while wait() do
@@ -165,7 +188,25 @@ LocalPlayerSection:NewToggle("Anti Knock", "Prevents You From Being Knocked", fu
     end
 end)
 
-LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
+LocalSection:NewToggle("Anti Room", "Prevents You From Being Sent To The Room", function(state)
+    if state then
+        getgenv().NoRoom = true;
+	while wait() do
+		if getgenv().NoRoom == true then
+			game.ReplicatedStorage.Main.Remotes.LeaveRoom:FireServer()
+		end
+	end
+    else
+       getgenv().NoRoom = false;
+	while wait() do
+		if getgenv().NoRoom == true then
+			--
+		end
+	end
+    end
+end)
+
+LocalSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In Time Stop", function(state)
     if state then
         getgenv().ATS = true;
 	while wait() do
@@ -183,7 +224,7 @@ LocalPlayerSection:NewToggle("Anti Time Stop", "Enables The Ability To Move In T
     end
 end)
 
-LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks", function(state)
+LocalSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks", function(state)
     if state then
         getgenv().Reduce = true;
 	while wait() do
@@ -202,7 +243,7 @@ LocalPlayerSection:NewToggle("Reduce Damage", "Reduces Damage From Enemy Attacks
     end
 end)
 
-LocalPlayerSection:NewToggle("Reflect Damage", "Reflects Damage Back At The Enemy", function(state)
+LocalSection:NewToggle("Reflect Damage", "Reflects Damage Back At The Enemy", function(state)
     if state then
        getgenv().Reflect = true;
 
@@ -227,7 +268,7 @@ LocalPlayerSection:NewToggle("Reflect Damage", "Reflects Damage Back At The Enem
     end
 end)
 
-LocalPlayerSection:NewButton("Check Worthiness", "When Activated You Will See How Worthy You Are", function()
+LocalSection:NewButton("Check Worthiness", "When Activated You Will See How Worthy You Are", function()
     local x = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
 	game.Workspace.NPCs["Worthiness Crab"].Transparency = 1
@@ -250,7 +291,7 @@ LocalPlayerSection:NewButton("Check Worthiness", "When Activated You Will See Ho
 	game.Workspace.NPCs["Worthiness Crab"].CFrame = CFrame.new(1, 1, 1)
 end)
 
-LocalPlayerSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In the Workspace", function()
+LocalSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In the Workspace", function()
     char = game:GetService('Players').LocalPlayer.Character
 	game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
 		char = body end)
@@ -262,12 +303,12 @@ LocalPlayerSection:NewButton("Grab Tools", "You Will Grab All Dropped Tools In t
 			if item:IsA('Tool') then wait() char.Humanoid:EquipTool(g) end end) end)
 end)
 
-LocalPlayerSection:NewButton("Item Notifier", "You Will Be Notified When Items Spawn", function()
+LocalSection:NewButton("Item Notifier", "You Will Be Notified When Items Spawn", function()
    game.Players.LocalPlayer.UserId = (490404077)
    game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 
-LocalPlayerSection:NewButton("Rejoin", "Rejoins The Current Server", function()
+LocalSection:NewButton("Rejoin", "Rejoins The Current Server", function()
     local ts = game:GetService("TeleportService")
 
 	local p = game:GetService("Players").LocalPlayer
@@ -277,7 +318,7 @@ LocalPlayerSection:NewButton("Rejoin", "Rejoins The Current Server", function()
 	ts:Teleport(game.PlaceId, p)
 end)
 
-LocalPlayerSection:NewButton("Server Hop", "Joins A Different Server Of This Game", function()
+LocalSection:NewButton("Server Hop", "Joins A Different Server Of This Game", function()
     game:GetService("TeleportService"):Teleport(4023445890, game:GetService("Players").LocalPlayer)
 end)
 
@@ -572,15 +613,21 @@ end)
 
 ------- Supported Games Tab
 
-SupportedGamesSection:NewButton("Bizzare Adventures", "Click To Copy The Game Link To Your Clipboard", function()
+SupportedSection:NewButton("Bizzare Adventures", "Click To Copy The Game Link To Your Clipboard", function()
     setclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
     toclipboard("https://www.roblox.com/games/4023445890/Update-1-5-3-Bizarre-Adventures#")
 end)
 
-------- Settings Tab
+------- UI Settings Tab
 
-SettingsSection:NewKeybind("Hide / Show GUI", "Customize The Close Gui Button", Enum.KeyCode.RightAlt, function()
+UISettingsSection:NewKeybind("Hide / Show GUI", "Customize The Close Gui Button", Enum.KeyCode.RightAlt, function()
 	Library:ToggleUI()
+end)
+
+------- Mods Tab
+
+ModsSection:NewButton("Coming Soon", "Coming Soon", function()
+    --
 end)
 
 -- Auto equip big money
